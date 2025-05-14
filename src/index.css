@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: 255 255 255;
-  --color-box: 255 255 255;
+  --color-bg: 0 0 0;
+  --color-box: 0 0 0;
   --box-border: 229 231 235;
   --box-sd: 226 232 240 / 0.5;
   --heading-1: 23 37 84;
@@ -11,8 +11,8 @@
 }
 
 .dark {
-  --color-bg: 3 7 18;
-  --color-box: 17 24 39;
+  --color-bg: 0 0 0;
+  --color-box: 0 0 0;
   --box-border: 243 244 246 / 0.1;
   --box-sd: transparent;
   --heading-1: 255 255 255;
@@ -36,6 +36,12 @@
   .text-heading-3 {
     color: rgb(var(--heading-3));
   }
+  .border-box-border {
+    border-color: rgb(var(--box-border));
+  }
+  .shadow-box-shadow {
+    box-shadow: 0 4px 6px -1px rgb(var(--box-sd));
+  }
 }
 
 html {
@@ -45,3 +51,17 @@ html {
 body {
   font-family: "Raleway", sans-serif;
 }
+
+@layer base {
+  body {
+    @apply bg-black text-gray-100;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+}
+

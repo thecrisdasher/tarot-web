@@ -11,15 +11,14 @@ export const Layout = ({ title, children }: LayoutProps) => {
   useEffect(() => {
     document.title = title;
   }, [title]);
+  
   return (
-    <>
+    <div className="min-h-screen bg-black">
       <Navbar />
-
       <main className="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
         {children}
       </main>
-
       <Footer />
-    </>
+    </div>
   );
 };
