@@ -1,5 +1,5 @@
 import { Container } from "../shared/Container";
-import logo from "/assets/icon.svg";
+import logo from "/assets/icon.png";
 import { NavItem } from "../shared/NavItem";
 import { BtnLink } from "../shared/BtnLink";
 import { useThemeStore } from "../../store/ThemeStore";
@@ -20,10 +20,10 @@ export const Navbar = () => {
         <nav className="w-full flex justify-between gap-6 relative">
           {/* Logo */}
           <div className="min-w-max inline-flex relative">
-            <a href="/" className="relative flex items-center gap-3">
-              <img src={logo} alt="EdgeAI Logo" className="w-10 h-10" />
+            <a href="/" className="relative flex items-center gap-0">
+              <img src={logo} alt="EdgeAI Logo" className="w-20 h-15" />
               <div className="inline-flex text-lg font-semibold text-heading-1">
-                EdgeAI
+               Maestro Alaric
               </div>
             </a>
           </div>
