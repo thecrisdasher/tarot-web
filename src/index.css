@@ -64,7 +64,7 @@ body {
 
 @layer base {
   body {
-    @apply bg-body text-heading-1;
+    @apply bg-white text-gray-900 dark:bg-black dark:text-gray-100;
     font-family: "Raleway", sans-serif;
     transition: background-color 0.6s cubic-bezier(0.4,0,0.2,1), color 0.6s cubic-bezier(0.4,0,0.2,1);
   }
