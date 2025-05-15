@@ -22,7 +22,7 @@ function App() {
   }, []);
   
   return (
-    <Layout title="EdgeAI">
+    <Layout title="Maestro Alaric">
       <section id="hero">
         <Hero />
       </section>
