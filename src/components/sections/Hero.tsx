@@ -2,10 +2,19 @@ import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Numbers } from "./Numbers";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { Engine } from "tsparticles-engine";
 
 export const Hero = () => {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    const { loadFull } = await import("tsparticles");
+    await loadFull(engine);
+  }, []);
+
   return (
     <section className="relative pt-32 lg:pt-36">
+      <Particles />
       <Container className="flex flex-col gap-10 lg:gap-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
           <div className="group relative overflow-hidden rounded-3xl">
@@ -57,16 +66,36 @@ export const Hero = () => {
 
         <div className="relative flex flex-col items-center text-center max-w-3xl mx-auto">
           <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
-            Empower Your Business
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-red-900 ml-2">
-              with AI{" "}
+            Hechizos y Rituales 
+            <span 
+              className="text-transparent bg-clip-text ml-2 relative inline-block"
+              style={{
+                background: 'linear-gradient(to right, #ff0844, #b300ff)',
+                WebkitBackgroundClip: 'text',
+                backgroundSize: '200% auto',
+                animation: 'textShimmer 2s infinite alternate',
+                textShadow: '0 0 20px rgba(255, 8, 68, 0.5), 0 0 30px rgba(179, 0, 255, 0.3)'
+              }}
+            >
+              Maestro Alaric{" "}
+              <div 
+                style={{
+                  position: 'absolute',
+                  top: '-5px',
+                  left: '-5px',
+                  right: '-5px',
+                  bottom: '-5px',
+                  background: 'radial-gradient(circle, rgba(255,8,68,0.3) 0%, rgba(179,0,255,0.2) 50%, rgba(0,0,0,0) 70%)',
+                  filter: 'blur(8px)',
+                  borderRadius: '10px',
+                  zIndex: -1,
+                  animation: 'glowPulse 3s infinite'
+                }}
+              ></div>
             </span>
           </h1>
           <Paragraph className="mt-8">
-            Our AI SaaS platform seamlessly integrates with your existing
-            workflows to deliver real‑time insights, intelligent automation, and
-            data‑driven decision-making. Experience a future where your business
-            runs smarter, faster, and more efficiently.
+           El Maestro Alaric, guía y hechicero con más de dos décadas de experiencia, ofrece servicios de hechicería auténtica, realizados con sabiduría, respeto y poder ritual. A través de prácticas místicas personalizadas, podrás encontrar soluciones profundas a problemas de amor, protección, dinero, salud, y armonía espiritual.
           </Paragraph>
           <div className="mt-10 w-full flex max-w-md mx-auto">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
@@ -108,6 +137,20 @@ export const Hero = () => {
         </div>
       </Container>
       <Numbers />
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes textShimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+          }
+          
+          @keyframes glowPulse {
+            0% { opacity: 0.5; transform: scale(0.97); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+            100% { opacity: 0.5; transform: scale(0.97); }
+          }
+        `
+      }} />
     </section>
   );
 };
