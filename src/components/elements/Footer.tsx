@@ -48,12 +48,6 @@ export const Footer = () => {
             </a>{" "}
             © {new Date().getFullYear()} - Todos los derechos reservados
           </p>
-          <a 
-            href="#contacto" 
-            className="relative z-10 text-white hover:text-gray-300 transition-colors duration-300 mt-2 inline-block"
-          >
-            Contacto
-          </a>
         </div>
       </Container>
       <style>{`
