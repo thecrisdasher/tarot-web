@@ -23,7 +23,7 @@ export const Services = () => {
     {
       nombre: "Sofía Martínez",
       texto: "Después de probar con otros brujos sin resultados, el Maestro Alaric logró resolver mi problema en tan solo 3 días. La protección espiritual que me brindó es real.",
-      imagen: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv92w3adfs5txqxrvt4qv62v%2F1747283026_img_0.webp?st=2025-05-15T02%3A47%3A09Z&se=2025-05-21T03%3A47%3A09Z&sks=b&skt=2025-05-15T02%3A47%3A09Z&ske=2025-05-21T03%3A47%3A09Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=7kISxqxPoS4hHS7LIsow7Q%2BMZUrAx9rERhAu9La62y0%3D&az=oaivgprodscus",
+      imagen: "/assets/logos/conversacion3.png",
       gradient: "from-cyan-900 via-cyan-800 to-cyan-600",
       hoverGradient: "from-cyan-800 via-cyan-700 to-cyan-500",
     },
