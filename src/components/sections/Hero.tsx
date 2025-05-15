@@ -2,19 +2,10 @@ import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Numbers } from "./Numbers";
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { Engine } from "tsparticles-engine";
 
 export const Hero = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    const { loadFull } = await import("tsparticles");
-    await loadFull(engine);
-  }, []);
-
   return (
     <section className="relative pt-24 lg:pt-28 pb-6 md:pb-10">
-      <Particles />
       <Container className="flex flex-col gap-8 lg:gap-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
           <div className="group relative overflow-hidden rounded-3xl">

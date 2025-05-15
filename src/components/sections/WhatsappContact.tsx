@@ -92,33 +92,27 @@ export const WhatsappContact = () => {
     },
     {
       title: "Limpieza Espiritual",
-      description: "Rituales poderosos que suavizan corazones endurecidos, eliminando rencores y abriendo caminos para la reconciliación.",
+      description: "Purificación energética que elimina bloqueos, maldiciones y energías negativas para restaurar tu bienestar y equilibrio.",
       number: "+34600000000",
       icon: "ritual",
       gradient: "from-emerald-900 via-emerald-700 to-green-600",
       hoverGradient: "from-emerald-800 via-emerald-600 to-green-500",
       textColor: "group-hover:text-emerald-300",
       shadowColor: "rgba(25, 252, 0, 0.7)",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv6fx1veftk9fsn1jp81weq4%2F1747196040_img_0.webp?st=2025-05-14T02%3A19%3A25Z&se=2025-05-20T03%3A19%3A25Z&sks=b&skt=2025-05-14T02%3A19%3A25Z&ske=2025-05-20T03%3A19%3A25Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2FtZJt9C1maWx63RXxI4K%2F5d%2F%2BxRMM%2FeQsR3aENC4dmE%3D&az=oaivgprodscus"
+      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv91tngaeyn8yzzkhdt5kxwj%2F1747281928_img_1.webp?st=2025-05-15T02%3A45%3A57Z&se=2025-05-21T03%3A45%3A57Z&sks=b&skt=2025-05-15T02%3A45%3A57Z&ske=2025-05-21T03%3A45%3A57Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=hndRySYlxkK57E76ub5o8DboPqR%2BYY8BeRPLVIViGqE%3D&az=oaivgprodscus"
     },
     {
       title: "Protección Espiritual",
-      description: "Purificación espiritual que elimina energías negativas, maldiciones y trabajos oscuros.",
+      description: "Escudos místicos y talismanes poderosos que te protegen contra energías negativas, envidias y ataques espirituales.",
       number: "+34600000000",
       icon: "emergency",
       gradient: "from-cyan-900 via-cyan-800 to-cyan-600",
       hoverGradient: "from-cyan-800 via-cyan-700 to-cyan-500",
       textColor: "group-hover:text-cyan-300",
       shadowColor: "rgba(14, 165, 233, 0.6)",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv5xm9fnek2stagg6s8cdpek%2F1747176884_img_0.webp?st=2025-05-14T01%3A32%3A34Z&se=2025-05-20T02%3A32%3A34Z&sks=b&skt=2025-05-14T01%3A32%3A34Z&ske=2025-05-20T02%3A32%3A34Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Sgwm1lbYLmq8nDV8UrgIrdlAcRhajg%2Bjzh5tUTN3HgI%3D&az=oaivgprodscus"
+      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv92w3adfs5txqxrvt4qv62v%2F1747283026_img_0.webp?st=2025-05-15T02%3A47%3A09Z&se=2025-05-21T03%3A47%3A09Z&sks=b&skt=2025-05-15T02%3A47%3A09Z&ske=2025-05-21T03%3A47%3A09Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=7kISxqxPoS4hHS7LIsow7Q%2BMZUrAx9rERhAu9La62y0%3D&az=oaivgprodscus"
     }
   ];
-
-  // Función para abrir WhatsApp con el número correspondiente
-  const openWhatsApp = (number: string, title: string) => {
-    const message = encodeURIComponent(`Hola Maestro Alaric, me interesa una consulta sobre: ${title}`);
-    window.open(`https://wa.me/${+573163314375}?text=${message}`, '_blank');
-  };
 
   return (
     <section className="relative py-0 mt-0 md:-mt-26  overflow-hidden">
@@ -217,38 +211,46 @@ export const WhatsappContact = () => {
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <img
-                  src={option.image}
-                  alt={option.title}
-                  className="w-full h-[400px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-all duration-500 flex flex-col justify-end p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{option.title}</h3>
-                  <p className="text-gray-200 mb-5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                    {option.description}
-                  </p>
-                  <button
-                    onClick={() => openWhatsApp(option.number, option.title)}
-                    className={`mt-2 py-3 px-6 rounded-xl bg-black/40 text-white font-medium flex items-center justify-center gap-3 
-                    w-full transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 
-                    shadow-lg backdrop-blur-sm ${
-                      index === 0 ? 'group-hover:bg-rose-900/60' : 
-                      index === 1 ? 'group-hover:bg-emerald-900/60' : 
-                      'group-hover:bg-cyan-900/60'
-                    }`}
-                  >
-                    <img 
-                      src="/assets/logos/whatsapp.png" 
-                      alt="WhatsApp" 
-                      className="w-7 h-7 object-contain animate-float-msg" 
-                    />
-                    <span className="font-semibold">Contactar Ahora</span>
-                  </button>
-                </div>
+                {/* Toda la tarjeta es un enlace a WhatsApp */}
+                <a
+                  href="https://api.whatsapp.com/send?phone=573163314375&text=Hola%20Maestro%20Alaric%2C%20me%20interesa%20una%20consulta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  <img
+                    src={option.image}
+                    alt={option.title}
+                    className="w-full h-[400px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-all duration-500 flex flex-col justify-end p-8">
+                    <h3 className="text-2xl font-semibold text-white mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{option.title}</h3>
+                    <p className="text-gray-200 mb-5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                      {option.description}
+                    </p>
+                    {/* Botón visual (parte de la tarjeta-enlace) */}
+                    <div
+                      className={`mt-2 py-3 px-6 rounded-xl bg-black/40 text-white font-medium flex items-center justify-center gap-3 
+                      w-full transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 
+                      shadow-lg backdrop-blur-sm cursor-pointer ${
+                        index === 0 ? 'group-hover:bg-rose-900/60' : 
+                        index === 1 ? 'group-hover:bg-emerald-900/60' : 
+                        'group-hover:bg-cyan-900/60'
+                      }`}
+                    >
+                      <img 
+                        src="/assets/logos/whatsapp.png" 
+                        alt="WhatsApp" 
+                        className="w-7 h-7 object-contain animate-float-msg" 
+                      />
+                      <span className="font-semibold">Contactar Ahora</span>
+                    </div>
+                  </div>
+                </a>
                 
                 {/* Efecto de brillo en el borde */}
                 <div 
-                  className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500"
+                  className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none"
                   style={{
                     border: '1px solid rgba(255,255,255,0.3)',
                     boxShadow: `inset 0 0 0px ${option.shadowColor.replace(')', ', 0.2)')}`
