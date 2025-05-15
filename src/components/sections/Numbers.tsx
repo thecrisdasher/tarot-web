@@ -80,8 +80,8 @@ export const Numbers = () => {
     <section className="relative mt-0 md:mt-16">
       <Container className="flex justify-center align-center">
         <div
-          className="mx-auto lg:mx-0 p-5 sm:p-6 sm:py-8 max-w-5xl rounded-3xl bg-box-bg
-                        border border-box-border shadow-lg shadow-box-shadow md:divide-x divide-box-border
+          className="mx-auto lg:mx-0 p-5 sm:p-6 sm:py-8 max-w-5xl rounded-3xl
+                        border border-box-border/30 shadow-lg backdrop-blur-sm md:divide-x divide-box-border/30
                         grid grid-cols-2 md:grid-cols-4"
         >
           <div className="text-center px-5 group/tierra">

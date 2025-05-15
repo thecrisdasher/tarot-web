@@ -93,11 +93,10 @@ export const Hero = () => {
               <form
                 action="#"
                 className="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3
-                                          shadow-lg shadow-box-shadow border border-box-border
-                                          bg-box-bg rounded-full ease-linear focus-within:bg-body
-                                          focus-within:border-purple-900"
+                                          shadow-lg border border-purple-900/30 backdrop-blur-sm
+                                          bg-transparent rounded-full ease-linear focus-within:border-purple-600"
               >
-                <span className="min-w-max pr-2 border-r border-box-border">
+                <span className="min-w-max pr-2 border-r border-purple-900/30">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -105,7 +104,7 @@ export const Hero = () => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
-                    className="w-5 h-5"
+                    className="w-5 h-5 text-purple-400"
                   >
                     <path
                       strokeLinecap="round"
@@ -117,7 +116,7 @@ export const Hero = () => {
                 <input
                   type="email"
                   placeholder="johndoe@gmail.com"
-                  className="w-full py-3 outline-none bg-transparent"
+                  className="w-full py-3 outline-none bg-transparent text-white placeholder-gray-400"
                 />
                 <Button className="min-w-max text-white">
                   <span className="relative z-[5]">Get Started</span>

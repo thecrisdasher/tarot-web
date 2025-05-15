@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
+    "@tsparticles/preset-fire": "^3.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-tsparticles": "^2.12.2",

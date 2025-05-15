@@ -74,7 +74,7 @@ export const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col">
+        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col -mt-36">
           <div className="mb-4">
             <Title>
               <span className="text-transparent bg-clip-text ml-2 relative inline-block mr-2"

@@ -6,6 +6,7 @@ import { CTA } from "./components/sections/CallToAction";
 import { Hero } from "./components/sections/Hero";
 import { Pricing } from "./components/sections/Pricing";
 import { Services } from "./components/sections/Services";
+import { ContactForm } from "./components/sections/CallToAction";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <AboutUs />
       <Pricing />
       <CTA />
+      <ContactForm />
       <SmokeBackground />
       
       {/* Botón flotante de WhatsApp */}
