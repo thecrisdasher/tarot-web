@@ -2,8 +2,41 @@ import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Numbers } from "./Numbers";
+import { useState } from "react";
 
 export const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [enviando, setEnviando] = useState(false);
+  const [enviado, setEnviado] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setEnviando(true);
+    try {
+      const formData = new FormData();
+      formData.append("correo", email);
+      formData.append("origen", "Hero");
+      const response = await fetch("https://formspree.io/f/meogvbjj", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: formData,
+      });
+      if (response.ok) {
+        setEnviado(true);
+        setEmail("");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 3500);
+      }
+    } finally {
+      setEnviando(false);
+    }
+  };
+
   return (
     <section className="relative pt-24 lg:pt-28 pb-6 md:pb-10">
       <Container className="flex flex-col gap-8 lg:gap-10">
@@ -91,10 +124,10 @@ export const Hero = () => {
           <div className="mt-10 md:mt-12 w-full flex max-w-md mx-auto">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
               <form
-                action="#"
+                onSubmit={handleSubmit}
                 className="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3
-                                          shadow-lg border border-purple-900/30 backdrop-blur-sm
-                                          bg-transparent rounded-full ease-linear focus-within:border-purple-600"
+                  shadow-lg border border-purple-900/30 backdrop-blur-sm
+                  bg-transparent rounded-full ease-linear focus-within:border-purple-600"
               >
                 <span className="min-w-max pr-2 border-r border-purple-900/30">
                   <svg
@@ -115,13 +148,43 @@ export const Hero = () => {
                 </span>
                 <input
                   type="email"
+                  name="correo"
                   placeholder="johndoe@gmail.com"
+                  value={email}
+                  onChange={handleChange}
+                  required
                   className="w-full py-3 outline-none bg-transparent text-white placeholder-gray-400"
+                  disabled={enviando || enviado}
                 />
-                <Button className="min-w-max text-white">
-                  <span className="relative z-[5]">Get Started</span>
-                </Button>
+                <button
+                  type="submit"
+                  disabled={enviando || enviado}
+                  className="min-w-max text-white px-6 py-2 rounded-full bg-gradient-to-r from-purple-700 to-purple-900 font-semibold shadow-md transition-transform duration-300 hover:scale-105"
+                >
+                  <span className="relative z-[5]">
+                    {enviado ? "¡Enviado!" : enviando ? "Enviando..." : "Get Started"}
+                  </span>
+                </button>
               </form>
+              {showToast && (
+                <div className="fixed left-1/2 bottom-10 transform -translate-x-1/2 z-50">
+                  <div className="bg-black/90 border border-green-500 text-white px-6 py-4 rounded-2xl shadow-lg flex items-center gap-3 animate-fade-in-up">
+                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>¡Correo enviado con éxito!</span>
+                  </div>
+                  <style>{`
+                    @keyframes fade-in-up {
+                      0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+                      100% { opacity: 1; transform: translateY(0) scale(1); }
+                    }
+                    .animate-fade-in-up {
+                      animation: fade-in-up 0.7s cubic-bezier(.39,.575,.565,1) both;
+                    }
+                  `}</style>
+                </div>
+              )}
             </div>
           </div>
         </div>

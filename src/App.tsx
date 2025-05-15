@@ -23,13 +23,22 @@ function App() {
   
   return (
     <Layout title="EdgeAI">
-      <Hero />
+      <section id="hero">
+        <Hero />
+      </section>
       <WhatsappContact />
       <Services />
-      <AboutUs />
-      <Pricing />
+      <section id="about-us">
+        <AboutUs />
+      </section>
+      <section id="servicios">
+        <Pricing />
+      </section>
       <CTA />
-      <ContactForm />
+      <div id="testimonios"></div>
+      <section id="contacto">
+        <ContactForm />
+      </section>
       <SmokeBackground />
       
       {/* Botón flotante de WhatsApp */}

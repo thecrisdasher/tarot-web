@@ -5,10 +5,11 @@ import { BtnLink } from "../shared/BtnLink";
 import { useThemeStore } from "../../store/ThemeStore";
 
 export const navItems = [
-  { href: "#", text: "Home" },
-  { href: "#services", text: "Services" },
-  { href: "#about-us", text: "About Us" },
-  { href: "#pricing", text: "Pricing" },
+  { href: "#hero", text: "Inicio" },
+  { href: "#servicios", text: "Servicios" },
+  { href: "#testimonios", text: "Testimonios" },
+  { href: "#about-us", text: "Sobre mí" },
+  { href: "#contacto", text: "Contacto" },
 ];
 
 export const Navbar = () => {
@@ -22,8 +23,26 @@ export const Navbar = () => {
           <div className="min-w-max inline-flex relative">
             <a href="/" className="relative flex items-center gap-0">
               <img src={logo} alt="EdgeAI Logo" className="w-20 h-15" />
-              <div className="inline-flex text-lg font-semibold text-heading-1">
-               Maestro Alaric
+              <div className="inline-flex text-lg font-semibold text-heading-1 ml-2">
+                Maestro
+                <span
+                  className="ml-2 text-transparent bg-clip-text relative inline-block"
+                  style={{
+                    background: 'linear-gradient(to right, #eefe0a, #e31515)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundSize: '200% auto',
+                    animation: 'textShimmer 2s infinite alternate',
+                    textShadow: '0 0 20px rgba(230,254,10,0.3), 0 0 30px rgba(227,21,21,0.2)'
+                  }}
+                >
+                  Alaric
+                </span>
+                <style>{`
+                  @keyframes textShimmer {
+                    0% { background-position: 0% 50%; }
+                    100% { background-position: 100% 50%; }
+                  }
+                `}</style>
               </div>
             </a>
           </div>
