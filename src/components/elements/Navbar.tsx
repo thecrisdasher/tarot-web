@@ -12,7 +12,7 @@ export const navItems = [
 ];
 
 export const Navbar = () => {
-  const { toggleTheme, theme } = useThemeStore();
+  const { theme } = useThemeStore();
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 py-6">

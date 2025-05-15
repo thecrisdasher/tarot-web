@@ -1,5 +1,4 @@
 import { magicServices } from "../../utils/magic-services";
-import { Button } from "../shared/Button";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Title } from "../shared/Title";
