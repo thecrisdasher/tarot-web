@@ -30,7 +30,7 @@ export const CTA = () => {
               href="https://api.whatsapp.com/send?phone=573163314375&text=Hola%20Maestro%20Alaric%2C%20quiero%20una%20consulta%20espiritual" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-green-600 to-emerald-700 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-300"
+              className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-green-700 to-emerald-900 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-300"
             >
               Consultar por WhatsApp
             </a>
@@ -86,7 +86,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="-mt-68 py-20">
+    <section className="-mt-88 py-20">
       <Container>
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Contacto directo</h2>
@@ -133,8 +133,8 @@ export const ContactForm = () => {
               disabled={enviando || enviado}
               className={`mt-4 px-8 py-3 rounded-xl font-bold text-lg shadow-lg transition-transform duration-300
                 ${enviado
-                  ? 'bg-green-700 text-white cursor-default'
-                  : 'bg-gradient-to-r from-green-600 to-emerald-700 text-white hover:scale-105'}
+                  ? 'bg-gradient-to-r from-purple-900 to-indigo-900 text-white cursor-default'
+                  : 'bg-gradient-to-r from-purple-700 via-blue-600 to-indigo-800 text-white hover:scale-105'}
               `}
             >
               {enviado ? "¡Enviado con éxito!" : enviando ? "Enviando..." : "Enviar"}

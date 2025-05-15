@@ -13,7 +13,7 @@ export const Layout = ({ title, children }: LayoutProps) => {
   }, [title]);
   
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-body">
       <Navbar />
       <main className="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
         {children}

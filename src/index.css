@@ -20,6 +20,16 @@
   --heading-3: 209 213 219;
 }
 
+.light {
+  --color-bg: 255 255 255;
+  --color-box: 255 255 255;
+  --box-border: 31 41 55 / 0.1;
+  --box-sd: transparent;
+  --heading-1: 23 37 84;
+  --heading-2: 31 41 55;
+  --heading-3: 55 65 81;
+}
+
 @layer utilities {
   .bg-body {
     background-color: rgb(var(--color-bg));
@@ -54,8 +64,9 @@ body {
 
 @layer base {
   body {
-    @apply bg-black text-gray-100;
+    @apply bg-black text-gray-100 dark:bg-black dark:text-gray-100 light:bg-white light:text-gray-900;
     font-family: "Raleway", sans-serif;
+    transition: background-color 0.6s cubic-bezier(0.4,0,0.2,1), color 0.6s cubic-bezier(0.4,0,0.2,1);
   }
 }
 

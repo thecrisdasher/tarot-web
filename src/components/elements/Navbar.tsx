@@ -8,8 +8,7 @@ export const navItems = [
   { href: "#hero", text: "Inicio" },
   { href: "#servicios", text: "Servicios" },
   { href: "#testimonios", text: "Testimonios" },
-  { href: "#about-us", text: "Sobre mí" },
-  { href: "#contacto", text: "Contacto" },
+  { href: "#about-us", text: "Sobre mí" }
 ];
 
 export const Navbar = () => {
@@ -66,14 +65,13 @@ export const Navbar = () => {
                             lg:pb-0 border-b border-box-border lg:border-0
                             px-6 lg:px-0"
             >
-              <BtnLink text="Get Started" href="#cta" className="" />
+              <BtnLink text="Get Started" href="#contacto" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700" />
             </div>
           </div>
 
           <div className="min-w-max flex items-center gap-x-3">
             <button
-              onClick={toggleTheme}
-              className="outline-hidden flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border cursor-pointer"
+              className="outline-hidden flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border cursor-pointer hover:bg-gray-800 transition-colors duration-300"
             >
               {theme === "dark" ? (
                 <svg
