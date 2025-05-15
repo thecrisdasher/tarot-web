@@ -77,7 +77,7 @@ export const Numbers = () => {
   }, []);
   
   return (
-    <section className="relative mt-12 md:mt-16">
+    <section className="relative mt-0 md:mt-16">
       <Container className="flex justify-center align-center">
         <div
           className="mx-auto lg:mx-0 p-5 sm:p-6 sm:py-8 max-w-5xl rounded-3xl bg-box-bg

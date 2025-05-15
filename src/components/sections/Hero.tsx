@@ -13,9 +13,9 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-32 lg:pt-36">
+    <section className="relative pt-24 lg:pt-28 pb-6 md:pb-10">
       <Particles />
-      <Container className="flex flex-col gap-10 lg:gap-12">
+      <Container className="flex flex-col gap-8 lg:gap-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
           <div className="group relative overflow-hidden rounded-3xl">
             <img
@@ -64,7 +64,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-center text-center max-w-3xl mx-auto">
+        <div className="relative flex flex-col items-center text-center max-w-3xl mx-auto mt-2 lg:mt-16">
           <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
             Hechizos y Rituales 
             <span 
@@ -94,10 +94,10 @@ export const Hero = () => {
               ></div>
             </span>
           </h1>
-          <Paragraph className="mt-8">
+          <Paragraph className="mt-8 md:mt-10">
            El Maestro Alaric, guía y hechicero con más de dos décadas de experiencia, ofrece servicios de hechicería auténtica, realizados con sabiduría, respeto y poder ritual. A través de prácticas místicas personalizadas, podrás encontrar soluciones profundas a problemas de amor, protección, dinero, salud, y armonía espiritual.
           </Paragraph>
-          <div className="mt-10 w-full flex max-w-md mx-auto">
+          <div className="mt-10 md:mt-12 w-full flex max-w-md mx-auto">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
               <form
                 action="#"

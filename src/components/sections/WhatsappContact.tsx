@@ -81,33 +81,36 @@ export const WhatsappContact = () => {
   const contactOptions = [
     {
       title: "Amarres de Amor",
-      description: "Unión de dos almas en un vínculo eterno y poderoso",
+      description: "Un ritual ancestral que une dos almas en un vínculo eterno, despertando la pasión y el deseo más profundo.",
       number: "+34600000000",
       icon: "question-mark",
-      gradient: "from-blue-900 via-blue-700 to-blue-600",
-      hoverGradient: "from-blue-800 via-blue-600 to-blue-500",
-      textColor: "group-hover:text-blue-300",
-      shadowColor: "rgba(0, 255, 251, 0.7)"
+      gradient: "from-purple-900 via-red-800 to-rose-700",
+      hoverGradient: "from-purple-800 via-red-700 to-rose-600",
+      textColor: "group-hover:text-rose-300",
+      shadowColor: "rgba(255, 0, 128, 0.7)",
+      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv903jxfem595e3ka6m4wpwf%2F1747280113_img_0.webp?st=2025-05-15T01%3A49%3A45Z&se=2025-05-21T02%3A49%3A45Z&sks=b&skt=2025-05-15T01%3A49%3A45Z&ske=2025-05-21T02%3A49%3A45Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=wPCzs1gedoQm%2BtdGru4JavYG6VutLAHF1JiWjPJ0k7s%3D&az=oaivgprodscus"
     },
     {
-      title: "Endulzamientos",
-      description: "Rituales con esencias místicas para suavizar corazones",
+      title: "Limpieza Espiritual",
+      description: "Rituales poderosos que suavizan corazones endurecidos, eliminando rencores y abriendo caminos para la reconciliación.",
       number: "+34600000000",
       icon: "ritual",
       gradient: "from-emerald-900 via-emerald-700 to-green-600",
       hoverGradient: "from-emerald-800 via-emerald-600 to-green-500",
       textColor: "group-hover:text-emerald-300",
-      shadowColor: "rgba(25, 252, 0, 0.7)"
+      shadowColor: "rgba(25, 252, 0, 0.7)",
+      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv6fx1veftk9fsn1jp81weq4%2F1747196040_img_0.webp?st=2025-05-14T02%3A19%3A25Z&se=2025-05-20T03%3A19%3A25Z&sks=b&skt=2025-05-14T02%3A19%3A25Z&ske=2025-05-20T03%3A19%3A25Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2FtZJt9C1maWx63RXxI4K%2F5d%2F%2BxRMM%2FeQsR3aENC4dmE%3D&az=oaivgprodscus"
     },
     {
       title: "Protección Espiritual",
-      description: "Escudos energéticos contra energías negativas y maleficios",
+      description: "Purificación espiritual que elimina energías negativas, maldiciones y trabajos oscuros.",
       number: "+34600000000",
       icon: "emergency",
       gradient: "from-cyan-900 via-cyan-800 to-cyan-600",
       hoverGradient: "from-cyan-800 via-cyan-700 to-cyan-500",
       textColor: "group-hover:text-cyan-300",
-      shadowColor: "rgba(14, 165, 233, 0.6)"
+      shadowColor: "rgba(14, 165, 233, 0.6)",
+      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv5xm9fnek2stagg6s8cdpek%2F1747176884_img_0.webp?st=2025-05-14T01%3A32%3A34Z&se=2025-05-20T02%3A32%3A34Z&sks=b&skt=2025-05-14T01%3A32%3A34Z&ske=2025-05-20T02%3A32%3A34Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Sgwm1lbYLmq8nDV8UrgIrdlAcRhajg%2Bjzh5tUTN3HgI%3D&az=oaivgprodscus"
     }
   ];
 
@@ -118,7 +121,7 @@ export const WhatsappContact = () => {
   };
 
   return (
-    <section className="relative py-0 md:py- overflow-hidden">
+    <section className="relative py-0 mt-0 md:-mt-26  overflow-hidden">
       <Container className="space-y-6">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
@@ -150,12 +153,12 @@ export const WhatsappContact = () => {
               ></div>
             </span>
           </h1>
-          <p className="text-heading-3 text-lg mt-4 max-w-2xl mx-auto">
+          <p className="text-heading-3 text-lg mt-6 mb-4 max-w-2xl mx-auto">
             Consulta directamente con el Maestro Alaric para transformar tu destino y encontrar soluciones a tus problemas espirituales.
           </p>
         </div>
         
-        <div className="relative mt-4">
+        <div className="relative mt-10">
           {/* Efecto de partículas místicas - azul y verde */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(20)].map((_, i) => (
@@ -200,100 +203,39 @@ export const WhatsappContact = () => {
           </div>
           
           {/* Tarjetas de contacto */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
             {contactOptions.map((option, index) => (
               <div 
                 key={index}
-                className={`relative group overflow-hidden rounded-3xl transition-all duration-500 transform hover:translate-y-[-10px]`}
+                className={`relative group overflow-hidden rounded-3xl transition-all duration-500 transform hover:translate-y-[-10px] hover:shadow-2xl`}
+                style={{
+                  boxShadow: hoveredCard === index 
+                    ? `0 20px 50px ${option.shadowColor}` 
+                    : '0 10px 30px rgba(0,0,0,0.2)',
+                  transition: 'all 0.5s ease'
+                }}
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${option.gradient} opacity-90 transition-opacity duration-500`}></div>
-                
-                {/* Overlay con efecto de gradiente al hacer hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${option.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                
-                {/* Efecto de destellos/partículas */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden`}>
-                  {[...Array(15)].map((_, i) => (
-                    <div 
-                      key={`spark-${index}-${i}`}
-                      className="absolute rounded-full bg-white"
-                      style={{
-                        width: `${2 + Math.random() * 4}px`,
-                        height: `${2 + Math.random() * 4}px`,
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        opacity: 0.1 + Math.random() * 0.4,
-                        transform: `scale(${Math.random() * 0.8 + 0.2})`,
-                        filter: `blur(${Math.random() * 2}px)`,
-                        animation: `mystic-float ${3 + Math.random() * 4}s infinite ease-in-out`,
-                        animationDelay: `${Math.random() * 2}s`
-                      }}
-                    />
-                  ))}
-                </div>
-                
-                <div className="relative z-10 p-8 flex flex-col items-center text-white">
-                  {/* Ícono */}
-                  <div 
-                    className={`w-20 h-20 mb-6 flex items-center justify-center rounded-full 
-                    bg-black/30 backdrop-blur-sm group-hover:scale-110 transition-all duration-500
-                    shadow-lg`}
-                    style={{
-                      boxShadow: hoveredCard === index 
-                        ? `0 0 25px ${option.shadowColor}` 
-                        : '0 0 15px rgba(0,0,0,0.5)',
-                      transition: 'all 0.5s ease'
-                    }}
-                  >
-                    <img 
-                      src={`/assets/icons/${option.icon}.svg`} 
-                      alt={option.title}
-                      className="w-10 h-10 object-contain invert opacity-90 animate-float-msg" 
-                    />
-                  </div>
-                  
-                  {/* Título con estilo similar a "Maestro Alaric" */}
-                  <h3 
-                    className="text-2xl font-bold mb-4 text-center text-white relative"
-                    style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      letterSpacing: '0.05em',
-                      textShadow: '0 2px 4px rgba(0,0,0,0.5)',
-                      transform: hoveredCard === index ? 'scale(1.1)' : 'scale(1)',
-                      transition: 'all 0.5s ease'
-                    }}
-                  >
-                    {option.title}
-                    <div 
-                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      style={{
-                        background: 'linear-gradient(to right, rgba(56,189,248,0.3), rgba(20,184,166,0.3))',
-                        filter: 'blur(5px)',
-                        transform: 'scale(1.2)',
-                        zIndex: -1
-                      }}
-                    ></div>
-                  </h3>
-                  
-                  {/* Descripción */}
-                  <p className="text-white/90 text-center mb-8 group-hover:text-white transition-colors duration-300">
+                <img
+                  src={option.image}
+                  alt={option.title}
+                  className="w-full h-[400px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-all duration-500 flex flex-col justify-end p-8">
+                  <h3 className="text-2xl font-semibold text-white mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{option.title}</h3>
+                  <p className="text-gray-200 mb-5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                     {option.description}
                   </p>
-                  
-                  {/* Botón de WhatsApp */}
-                  <button 
+                  <button
                     onClick={() => openWhatsApp(option.number, option.title)}
-                    className="w-full py-4 px-6 rounded-xl bg-black/40 text-white font-medium flex items-center justify-center gap-3 
-                    transition-all duration-500 group-hover:bg-black/60 group-hover:scale-105 
-                    shadow-lg hover:shadow-xl transform backdrop-blur-sm"
-                    style={{
-                      boxShadow: hoveredCard === index 
-                        ? `0 10px 25px ${option.shadowColor}` 
-                        : '0 4px 15px rgba(0,0,0,0.2)',
-                      border: '1px solid rgba(255,255,255,0.1)'
-                    }}
+                    className={`mt-2 py-3 px-6 rounded-xl bg-black/40 text-white font-medium flex items-center justify-center gap-3 
+                    w-full transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 
+                    shadow-lg backdrop-blur-sm ${
+                      index === 0 ? 'group-hover:bg-rose-900/60' : 
+                      index === 1 ? 'group-hover:bg-emerald-900/60' : 
+                      'group-hover:bg-cyan-900/60'
+                    }`}
                   >
                     <img 
                       src="/assets/logos/whatsapp.png" 
@@ -308,8 +250,8 @@ export const WhatsappContact = () => {
                 <div 
                   className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500"
                   style={{
-                    border: '1px solid rgba(255,255,255,0.2)',
-                    boxShadow: 'inset 0 0 20px rgba(255,255,255,0.15)'
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    boxShadow: `inset 0 0 0px ${option.shadowColor.replace(')', ', 0.2)')}`
                   }}
                 ></div>
               </div>
