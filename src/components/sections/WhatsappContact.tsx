@@ -115,7 +115,7 @@ export const WhatsappContact = () => {
   ];
 
   return (
-    <section className="relative py-0 mt-0 md:-mt-26  overflow-hidden">
+    <section className="relative py-0 mt-0 md:-mt-26 mb-0 pb-2 overflow-hidden">
       <Container className="space-y-6">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
