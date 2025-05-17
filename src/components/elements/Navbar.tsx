@@ -20,12 +20,19 @@ export const Navbar = () => {
         <nav className="w-full flex justify-between gap-6 relative">
           {/* Logo */}
           <div className="min-w-max inline-flex relative">
-            <a href="/" className="relative flex items-center gap-0">
-              <img src={logo} alt="EdgeAI Logo" className="w-20 h-15" />
+            <a href="/" className="relative flex items-center gap-0 group">
+              <div className="relative">
+                <img 
+                  src={logo} 
+                  alt="EdgeAI Logo" 
+                  className="w-20 h-15 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_15px_rgba(238,254,10,0.5)] relative z-10" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#eefe0a] to-[#e31515] opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 rounded-full"></div>
+              </div>
               <div className="inline-flex text-lg font-semibold text-heading-1 ml-2">
                 Maestro
                 <span
-                  className="ml-2 text-transparent bg-clip-text relative inline-block"
+                  className="ml-2 text-transparent bg-clip-text relative inline-block transition-all duration-500 group-hover:scale-105"
                   style={{
                     background: 'linear-gradient(to right, #eefe0a, #e31515)',
                     WebkitBackgroundClip: 'text',
@@ -35,11 +42,18 @@ export const Navbar = () => {
                   }}
                 >
                   Alaric
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#eefe0a] to-[#e31515] opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500 -z-10"></div>
                 </span>
                 <style>{`
                   @keyframes textShimmer {
                     0% { background-position: 0% 50%; }
                     100% { background-position: 100% 50%; }
+                  }
+                  
+                  @keyframes glowPulse {
+                    0% { filter: drop-shadow(0 0 5px rgba(238,254,10,0.3)) drop-shadow(0 0 10px rgba(227,21,21,0.2)); }
+                    50% { filter: drop-shadow(0 0 15px rgba(238,254,10,0.5)) drop-shadow(0 0 20px rgba(227,21,21,0.4)); }
+                    100% { filter: drop-shadow(0 0 5px rgba(238,254,10,0.3)) drop-shadow(0 0 10px rgba(227,21,21,0.2)); }
                   }
                 `}</style>
               </div>
