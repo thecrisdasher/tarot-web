@@ -57,7 +57,7 @@ export const Hero = () => {
           </div>
           <div className="group relative overflow-hidden rounded-3xl">
             <img
-              src="https://videos.openai.com/vg-assets/assets%2Ftask_01jv6fx1veftk9fsn1jp81weq4%2F1747196040_img_0.webp?st=2025-05-14T02%3A19%3A25Z&se=2025-05-20T03%3A19%3A25Z&sks=b&skt=2025-05-14T02%3A19%3A25Z&ske=2025-05-20T03%3A19%3A25Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2FtZJt9C1maWx63RXxI4K%2F5d%2F%2BxRMM%2FeQsR3aENC4dmE%3D&az=oaivgprodscus"
+              src="/assets/images/endulzamientos.webp"
               alt="Hero image 2"
               width={2350}
               height={2359}
@@ -72,7 +72,7 @@ export const Hero = () => {
           </div>
           <div className="group relative overflow-hidden rounded-3xl">
             <img
-              src="https://videos.openai.com/vg-assets/assets%2Ftask_01jv5xm9fnek2stagg6s8cdpek%2F1747176884_img_0.webp?st=2025-05-14T01%3A32%3A34Z&se=2025-05-20T02%3A32%3A34Z&sks=b&skt=2025-05-14T01%3A32%3A34Z&ske=2025-05-20T02%3A32%3A34Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Sgwm1lbYLmq8nDV8UrgIrdlAcRhajg%2Bjzh5tUTN3HgI%3D&az=oaivgprodscus"
+              src="/assets/images/limpieza.webp"
               alt="Hero image 3"
               width={2350}
               height={2359}
