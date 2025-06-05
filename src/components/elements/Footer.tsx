@@ -39,7 +39,7 @@ export const Footer = () => {
           <p className="text-xs text-gray-500/50 font-light">
             Desarrollado por{" "}
             <a 
-              href="https://crisdasher-portfolio.vercel.app/" 
+              href="https://portafolio-cris-sepia.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-gray-400 transition-colors duration-300"
