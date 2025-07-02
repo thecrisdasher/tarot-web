@@ -33,10 +33,10 @@ export const AboutUs = () => {
         ))}
       </div>
       
-      <Container className="flex flex-col md:flex-row gap-10 lg:gap-12 items-center">
-        <div className="w-full md:w-5/12 lg:w-1/2">
+      <Container className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+        <div className="w-full lg:w-5/12 xl:w-1/2">
           <div 
-            className="w-full h-80 sm:h-96 relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-700"
+            className="w-full h-72 sm:h-80 lg:h-96 relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-700 mx-auto max-w-md lg:max-w-none"
             onMouseEnter={() => setIsHoveredImage(true)}
             onMouseLeave={() => setIsHoveredImage(false)}
             style={{
@@ -74,7 +74,7 @@ export const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col -mt-36">
+        <div className="w-full lg:w-7/12 xl:w-1/2 flex flex-col mt-8 lg:mt-0">
           <div className="mb-4">
             <Title>
               <span className="text-transparent bg-clip-text ml-2 relative inline-block mr-2"
@@ -98,7 +98,7 @@ export const AboutUs = () => {
             sus vidas mediante técnicas espirituales auténticas transmitidas por generaciones en su linaje familiar.
           </Paragraph>
 
-          <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
+          <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-3xl">
             <Info
               title="Experiencia Garantizada"
               description="El Maestro Alaric cuenta con 25 años de experiencia en rituales de alto impacto y conexión espiritual genuina."
@@ -119,7 +119,7 @@ export const AboutUs = () => {
           </div>
           
           {/* Sección de métodos de pago */}
-          <div className="mt-8 rounded-2xl bg-gray-900/40 backdrop-blur-sm p-6 border border-purple-900/30">
+          <div className="mt-6 lg:mt-8 rounded-2xl bg-gray-900/40 backdrop-blur-sm p-4 lg:p-6 border border-purple-900/30">
             <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
@@ -132,7 +132,7 @@ export const AboutUs = () => {
               El Maestro Alaric ofrece múltiples opciones de pago seguras y convenientes para sus servicios espirituales:
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
               <div className="bg-gray-800/60 rounded-xl p-3 flex flex-col items-center justify-center transition-all hover:bg-gray-800/90 hover:scale-105">
                 <img src="/assets/logos/paypal.png" alt="PayPal" className="h-8 w-auto mb-2" />
                 <span className="text-white text-xs">PayPal</span>

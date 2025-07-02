@@ -80,11 +80,11 @@ export const Numbers = () => {
     <section className="relative mt-0 md:mt-16">
       <Container className="flex justify-center align-center">
         <div
-          className="mx-auto lg:mx-0 p-5 sm:p-6 sm:py-8 max-w-5xl rounded-3xl
+          className="mx-auto lg:mx-0 p-3 sm:p-5 lg:p-6 sm:py-6 lg:py-8 max-w-5xl rounded-3xl
                         border border-box-border/30 shadow-lg backdrop-blur-sm md:divide-x divide-box-border/30
-                        grid grid-cols-2 md:grid-cols-4"
+                        grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0"
         >
-          <div className="text-center px-5 group/tierra">
+          <div className="text-center px-2 sm:px-3 lg:px-5 group/tierra">
             <div 
               className="flex justify-center items-center relative cursor-pointer overflow-hidden"
               onMouseEnter={() => setIsHovered(true)}
@@ -147,7 +147,7 @@ export const Numbers = () => {
             </h3>
             <p className="mt-2 text-heading-3 transition-opacity duration-500 group-hover/tierra:text-green-400"> Maestro Alaric, hechicero elemental. Rituales de sanación, equilibrio y poder natural.</p>
           </div>
-          <div className="text-center px-5 group/tarot">
+          <div className="text-center px-2 sm:px-3 lg:px-5 group/tarot">
             <div 
               className="flex justify-center items-center relative cursor-pointer overflow-hidden"
               onMouseEnter={() => setIsTarotHovered(true)}
@@ -210,7 +210,7 @@ export const Numbers = () => {
             </h3>
             <p className="mt-2 text-heading-3 transition-opacity duration-500 group-hover/tarot:text-purple-400"> Guía espiritual y respuestas claras a través del tarot ancestral.</p>
           </div>
-          <div className="text-center px-5 group/limpias">
+          <div className="text-center px-2 sm:px-3 lg:px-5 group/limpias">
             <div 
               className="flex justify-center items-center relative cursor-pointer overflow-hidden"
               onMouseEnter={() => setIsLimpiasHovered(true)}
@@ -275,7 +275,7 @@ export const Numbers = () => {
             </h3>
             <p className="mt-2 text-heading-3 transition-opacity duration-500 group-hover/limpias:text-blue-400"> Purificación energética para liberar energías negativas y bloqueos espirituales.</p>
           </div>
-          <div className="text-center px-5 group/fuego">
+          <div className="text-center px-2 sm:px-3 lg:px-5 group/fuego">
             <div 
               className="flex justify-center items-center relative cursor-pointer overflow-hidden"
               onMouseEnter={() => setIsFuegoHovered(true)}

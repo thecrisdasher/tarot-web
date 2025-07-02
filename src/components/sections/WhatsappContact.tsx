@@ -88,7 +88,7 @@ export const WhatsappContact = () => {
       hoverGradient: "from-purple-800 via-red-700 to-rose-600",
       textColor: "group-hover:text-rose-300",
       shadowColor: "rgba(255, 0, 128, 0.7)",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv903jxfem595e3ka6m4wpwf%2F1747280113_img_0.webp?st=2025-05-15T01%3A49%3A45Z&se=2025-05-21T02%3A49%3A45Z&sks=b&skt=2025-05-15T01%3A49%3A45Z&ske=2025-05-21T02%3A49%3A45Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=wPCzs1gedoQm%2BtdGru4JavYG6VutLAHF1JiWjPJ0k7s%3D&az=oaivgprodscus"
+      image: "/assets/images/velas.png"
     },
     {
       title: "Limpieza Espiritual",
@@ -99,7 +99,7 @@ export const WhatsappContact = () => {
       hoverGradient: "from-emerald-800 via-emerald-600 to-green-500",
       textColor: "group-hover:text-emerald-300",
       shadowColor: "rgba(25, 252, 0, 0.7)",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv91tngaeyn8yzzkhdt5kxwj%2F1747281928_img_1.webp?st=2025-05-15T02%3A45%3A57Z&se=2025-05-21T03%3A45%3A57Z&sks=b&skt=2025-05-15T02%3A45%3A57Z&ske=2025-05-21T03%3A45%3A57Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=hndRySYlxkK57E76ub5o8DboPqR%2BYY8BeRPLVIViGqE%3D&az=oaivgprodscus"
+      image: "/assets/images/ultima3.png"
     },
     {
       title: "Protección Espiritual",
@@ -110,7 +110,7 @@ export const WhatsappContact = () => {
       hoverGradient: "from-cyan-800 via-cyan-700 to-cyan-500",
       textColor: "group-hover:text-cyan-300",
       shadowColor: "rgba(14, 165, 233, 0.6)",
-      image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv92w3adfs5txqxrvt4qv62v%2F1747283026_img_0.webp?st=2025-05-15T02%3A47%3A09Z&se=2025-05-21T03%3A47%3A09Z&sks=b&skt=2025-05-15T02%3A47%3A09Z&ske=2025-05-21T03%3A47%3A09Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=7kISxqxPoS4hHS7LIsow7Q%2BMZUrAx9rERhAu9La62y0%3D&az=oaivgprodscus"
+      image: "/assets/images/vvelas2.png"
     }
   ];
 

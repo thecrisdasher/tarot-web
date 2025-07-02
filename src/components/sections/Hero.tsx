@@ -39,17 +39,17 @@ export const Hero = () => {
   return (
     <section className="relative pt-24 lg:pt-28 pb-6 md:pb-10">
       <Container className="flex flex-col gap-8 lg:gap-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 w-full">
           <div className="group relative overflow-hidden rounded-3xl">
             <img
               src="/assets/images/amarres.webp"
               alt="Hero image 1"
               width={2350}
               height={2359}
-              className="w-full h-[500px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-              <h3 className="text-2xl font-semibold text-white mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Amarres de Amor</h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4 sm:p-6 lg:p-8">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2 lg:mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Amarres de Amor</h3>
               <p className="text-gray-200 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                 Un ritual ancestral que une dos almas en un vínculo eterno, despertando la pasión y el deseo más profundo. Nuestros amares son realizados con elementos naturales y bendecidos por la luna.
               </p>
@@ -61,10 +61,10 @@ export const Hero = () => {
               alt="Hero image 2"
               width={2350}
               height={2359}
-              className="w-full h-[500px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-              <h3 className="text-2xl font-semibold text-white mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Endulzamientos</h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4 sm:p-6 lg:p-8">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2 lg:mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Endulzamientos</h3>
               <p className="text-gray-200 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                 Rituales poderosos que suavizan corazones endurecidos, eliminando rencores y abriendo caminos para la reconciliación. Utilizamos miel, azúcar y esencias especiales para endulzar las relaciones.
               </p>
@@ -76,10 +76,10 @@ export const Hero = () => {
               alt="Hero image 3"
               width={2350}
               height={2359}
-              className="w-full h-[500px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
+              className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-              <h3 className="text-2xl font-semibold text-white mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Limpiezas Energéticas</h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4 sm:p-6 lg:p-8">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2 lg:mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Limpiezas Energéticas</h3>
               <p className="text-gray-200 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                 Purificación espiritual que elimina energías negativas, maldiciones y trabajos oscuros. Nuestros rituales de limpieza utilizan hierbas sagradas y velas consagradas para restaurar tu energía vital.
               </p>
@@ -88,7 +88,7 @@ export const Hero = () => {
         </div>
 
         <div className="relative flex flex-col items-center text-center max-w-3xl mx-auto mt-2 lg:mt-16">
-          <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
+          <h1 className="text-heading-1 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             Hechizos y Rituales 
             <span 
               className="text-transparent bg-clip-text ml-2 relative inline-block"
@@ -120,11 +120,11 @@ export const Hero = () => {
           <Paragraph className="mt-8 md:mt-10">
            El Maestro Alaric, guía y hechicero con más de dos décadas de experiencia, ofrece servicios de hechicería auténtica, realizados con sabiduría, respeto y poder ritual. A través de prácticas místicas personalizadas, podrás encontrar soluciones profundas a problemas de amor, protección, dinero, salud, y armonía espiritual.
           </Paragraph>
-          <div className="mt-10 md:mt-12 w-full flex max-w-md mx-auto">
+          <div className="mt-8 md:mt-10 lg:mt-12 w-full flex max-w-md mx-auto">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
               <form
                 onSubmit={handleSubmit}
-                className="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3
+                className="py-1 pl-4 sm:pl-6 w-full pr-1 flex gap-2 sm:gap-3 items-center text-heading-3
                   shadow-lg border border-purple-900/30 backdrop-blur-sm
                   bg-transparent rounded-full ease-linear focus-within:border-purple-600"
               >
