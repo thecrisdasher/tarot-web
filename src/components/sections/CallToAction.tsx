@@ -27,7 +27,7 @@ export const CTA = () => {
           </Paragraph>
           <div className="mx-auto max-w-md">
             <a 
-              href="https://api.whatsapp.com/send?phone=573163314375&text=Hola%20Maestro%20Alaric%2C%20quiero%20una%20consulta%20espiritual" 
+              href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestro%20Alaric%2C%20quiero%20una%20consulta%20espiritual" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-green-700 to-emerald-900 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-300"

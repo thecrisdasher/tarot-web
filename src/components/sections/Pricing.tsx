@@ -150,7 +150,7 @@ export const Pricing = () => { // Mantenemos el nombre para no romper las import
                   
                   <div className="mt-8">
                     <a 
-                      href={`https://api.whatsapp.com/send?phone=573163314375&text=Hola%20Maestro%20Alaric%2C%20me%20interesa%20una%20consulta%20sobre%20${encodeURIComponent(service.title)}`}
+                      href={`https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestro%20Alaric%2C%20me%20interesa%20una%20consulta%20sobre%20${encodeURIComponent(service.title)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full inline-block py-3 px-6 text-center rounded-xl bg-gradient-to-r ${service.color} 
