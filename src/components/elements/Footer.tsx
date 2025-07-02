@@ -37,16 +37,7 @@ export const Footer = () => {
         {/* Texto de copyright */}
         <div className="mt-8 text-center">
           <p className="text-xs text-gray-500/50 font-light">
-            Desarrollado por{" "}
-            <a 
-              href="https://portafolio-cris-sepia.vercel.app/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              Mejor Llama A Cris
-            </a>{" "}
-            © {new Date().getFullYear()} - Todos los derechos reservados
+            © {new Date().getFullYear()} Maestro Alaric - Todos los derechos reservados
           </p>
         </div>
       </Container>
