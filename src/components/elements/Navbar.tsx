@@ -1,127 +1,160 @@
+import { useState } from "react";
 import { Container } from "../shared/Container";
-import logo from "/assets/icon.png";
 import { NavItem } from "../shared/NavItem";
-import { BtnLink } from "../shared/BtnLink";
-import { useThemeStore } from "../../store/ThemeStore";
-
-export const navItems = [
-  { href: "#hero", text: "Inicio" },
-  { href: "#servicios", text: "Servicios" },
-  { href: "#testimonios", text: "Testimonios" },
-  { href: "#about-us", text: "Sobre mí" }
-];
 
 export const Navbar = () => {
-  const { theme } = useThemeStore();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 py-6">
-      <Container>
-        <nav className="w-full flex justify-between gap-6 relative">
-          {/* Logo */}
-          <div className="min-w-max inline-flex relative">
-            <a href="/" className="relative flex items-center gap-0 group">
-              <div className="relative">
-                <img 
-                  src={logo} 
-                  alt="EdgeAI Logo" 
-                  className="w-20 h-15 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:drop-shadow-[0_0_15px_rgba(238,254,10,0.5)] relative z-10" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#eefe0a] to-[#e31515] opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 rounded-full"></div>
-              </div>
-              <div className="inline-flex text-lg font-semibold text-heading-1 ml-2">
-                Maestro
-                <span
-                  className="ml-2 text-transparent bg-clip-text relative inline-block transition-all duration-500 group-hover:scale-105"
-                  style={{
-                    background: 'linear-gradient(to right, #eefe0a, #e31515)',
-                    WebkitBackgroundClip: 'text',
-                    backgroundSize: '200% auto',
-                    animation: 'textShimmer 2s infinite alternate',
-                    textShadow: '0 0 20px rgba(230,254,10,0.3), 0 0 30px rgba(227,21,21,0.2)'
-                  }}
-                >
-                  Alaric
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#eefe0a] to-[#e31515] opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500 -z-10"></div>
-                </span>
-                <style>{`
-                  @keyframes textShimmer {
-                    0% { background-position: 0% 50%; }
-                    100% { background-position: 100% 50%; }
-                  }
-                  
-                  @keyframes glowPulse {
-                    0% { filter: drop-shadow(0 0 5px rgba(238,254,10,0.3)) drop-shadow(0 0 10px rgba(227,21,21,0.2)); }
-                    50% { filter: drop-shadow(0 0 15px rgba(238,254,10,0.5)) drop-shadow(0 0 20px rgba(227,21,21,0.4)); }
-                    100% { filter: drop-shadow(0 0 5px rgba(238,254,10,0.3)) drop-shadow(0 0 10px rgba(227,21,21,0.2)); }
-                  }
-                `}</style>
-              </div>
-            </a>
-          </div>
-
-          <div
-            className="flex flex-col lg:flex-row w-full lg:justify-between lg:items-center 
-                      absolute top-full left-0 lg:static lg:top-0 bg-gray-900 lg:bg-transparent 
-                      border-x border-gray-700 lg:border-x-0 lg:h-auto h-0 overflow-hidden"
-          >
-            <ul
-              className="border-t border-gray-700 lg:border-t-0 px-6 lg:px-0 
-                           pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 
-                           text-lg text-gray-200 w-full lg:justify-center lg:items-center"
-            >
-              {navItems.map((item, key) => (
-                <NavItem href={item.href} text={item.text} key={key} />
-              ))}
-            </ul>
-            <div
-              className="lg:min-w-max flex items-center sm:w-max w-full pb-6 
-                            lg:pb-0 border-b border-box-border lg:border-0
-                            px-6 lg:px-0"
-            >
-              <BtnLink text="Get Started" href="#contacto" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700" />
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 transparent-navbar">
+      <Container className="flex items-center justify-between py-4 lg:py-2">
+        {/* Logo */}
+        <div className="flex items-center gap-0">
+          <div className="relative group">
+            <div className="w-16 h-16 lg:w-32 lg:h-32 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img 
+                src="/assets/images/solyluna.png" 
+                alt="Sol y Luna Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
+          <div className="hidden sm:block -ml-6">
+            <h1 className="text-xl lg:text-2xl font-bold flex items-center h-full">
+              <span className="navbar-title-white">Tarot &nbsp;</span>
+              <span className="navbar-title-modern">Sol y Luna</span>
+            </h1>
+          </div>
+        </div>
 
-          <div className="min-w-max flex items-center gap-x-3">
-            <button
-              className="outline-hidden flex relative text-heading-2 rounded-full p-2 lg:p-3 border border-box-border cursor-pointer hover:bg-gray-800 transition-colors duration-300"
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex">
+          <ul className="flex items-center gap-8">
+            <NavItem href="/" text="Inicio" />
+            <NavItem href="#testimonios" text="Testimonios" />
+            <NavItem href="#consultas" text="Consultas" />
+            <NavItem href="#about" text="Sobre Atenea" />
+          </ul>
+        </nav>
+
+        {/* CTA Button */}
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              {theme === "dark" ? (
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.491"/>
+              </svg>
+              <span>Consulta Ahora</span>
+            </div>
+          </a>
+          </div>
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden">
+            <button
+            onClick={toggleMenu}
+            className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center hover:from-slate-200 hover:to-slate-300 transition-all duration-300"
+            >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+              className={`w-6 h-6 text-slate-700 transition-transform duration-300 ${
+                isOpen ? "rotate-45" : ""
+              }`}
                   fill="none"
+              stroke="currentColor"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
                 >
+              {isOpen ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-                  />
-                </svg>
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
                   />
-                </svg>
               )}
+            </svg>
             </button>
           </div>
-        </nav>
       </Container>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden">
+          <div className="bg-white/95 backdrop-blur-xl border-t border-purple-200/40">
+            <Container className="py-6">
+              <nav>
+                <ul className="space-y-4">
+                  <li>
+                    <a
+                      href="/"
+                      onClick={() => setIsOpen(false)}
+                      className="block py-3 text-slate-700 hover:text-orange-500 font-medium transition-colors duration-300"
+                    >
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#testimonios"
+                      onClick={() => setIsOpen(false)}
+                      className="block py-3 text-slate-700 hover:text-orange-500 font-medium transition-colors duration-300"
+                    >
+                      Testimonios
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#consultas"
+                      onClick={() => setIsOpen(false)}
+                      className="block py-3 text-slate-700 hover:text-orange-500 font-medium transition-colors duration-300"
+                    >
+                      Consultas
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#about"
+                      onClick={() => setIsOpen(false)}
+                      className="block py-3 text-slate-700 hover:text-orange-500 font-medium transition-colors duration-300"
+                    >
+                      Sobre Atenea
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              
+              <div className="mt-6">
+                <a
+                  href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.491"/>
+                  </svg>
+                  <span>Consulta Ahora</span>
+                </a>
+              </div>
+            </Container>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

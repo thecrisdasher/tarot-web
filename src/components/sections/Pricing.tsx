@@ -1,211 +1,206 @@
-import { magicServices } from "../../utils/magic-services";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
-import { Title } from "../shared/Title";
-import { useState } from "react";
+import { BtnLink } from "../shared/BtnLink";
+import { magicPlans } from "../../utils/pricing-plan";
 
-export const Pricing = () => { // Mantenemos el nombre para no romper las importaciones
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  // Definimos los íconos para los servicios
-  const getIcon = (iconName: string) => {
-    switch(iconName) {
-      case "heart":
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-          </svg>
-        );
-      case "fire":
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
-          </svg>
-        );
-      case "eye":
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-            <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-          </svg>
-        );
-      case "money":
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-          </svg>
-        );
-      case "shield":
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-        );
-      default:
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-          </svg>
-        );
-    }
-  };
-
+export const Pricing = () => {
   return (
-    <section id="servicios" className="py-16 relative">
-      {/* Efecto de partículas místicas decorativas */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+    <section className="py-20 lg:py-32 relative overflow-hidden">
+      {/* Fondo celestial */}
+      <div className="absolute inset-0 celestial-gradient"></div>
+      
+      {/* Elementos decorativos Sol y Luna */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 right-10 w-24 h-24 sol-gradient rounded-full animate-pulse-cosmic opacity-40"></div>
+        <div className="absolute bottom-10 left-20 w-20 h-20 luna-gradient rounded-full animate-pulse-cosmic opacity-50"></div>
+        
+        {/* Constelaciones decorativas */}
+        {[...Array(10)].map((_, i) => (
           <div 
-            key={`mystic-particle-services-${i}`}
-            className="absolute animate-mystic-float"
+            key={`constellation-${i}`}
+            className="absolute animate-celestial-dance"
             style={{
-              width: `${3 + Math.random() * 8}px`,
-              height: `${3 + Math.random() * 8}px`,
+              width: `${2 + Math.random() * 4}px`,
+              height: `${2 + Math.random() * 4}px`,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: Math.random() > 0.5 
-                ? `radial-gradient(circle, rgba(138,43,226,${0.5 + Math.random() * 0.5}) 0%, rgba(103,16,155,0) 70%)`
-                : `radial-gradient(circle, rgba(255,215,0,${0.3 + Math.random() * 0.4}) 0%, rgba(218,165,32,0) 70%)`,
-              borderRadius: '50%',
-              filter: 'blur(2px)',
-              opacity: 0.3 + Math.random() * 0.3,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 7}s`
+              background: `linear-gradient(45deg, ${
+                Math.random() > 0.5 ? '#FB923C' : '#94A3B8'
+              }, white)`,
+              clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+              animationDelay: `${Math.random() * 6}s`,
+              animationDuration: `${8 + Math.random() * 6}s`,
+              opacity: 0.7
             }}
           />
         ))}
       </div>
       
-      <Container className="text-center">
-        <div className="mb-12 -mt-48">
-          <Title>
-            Servicios Místicos
-            <span 
-              className="text-transparent bg-clip-text ml-2 relative inline-block"
-              style={{
-                background: 'linear-gradient(to right, #8b5cf6, #ec4899)',
-                WebkitBackgroundClip: 'text',
-                backgroundSize: '200% auto',
-                animation: 'textShimmer 2s infinite alternate',
-                textShadow: '0 0 20px rgba(139, 92, 246, 0.5), 0 0 30px rgba(236, 72, 153, 0.3)'
-              }}
-            > Ancestrales</span>
-          </Title>
-          <Paragraph className="mt-4 max-w-3xl mx-auto">
-            El Maestro Alaric ofrece rituales y hechizos poderosos, elaborados con sabiduría ancestral 
-            y elementos naturales consagrados para resultados garantizados y duraderos.
+      <Container className="relative z-10">
+        <div className="text-center mb-16 lg:mb-24">
+          <h1 className="text-4xl lg:text-6xl font-bold text-slate-800 mb-6">
+            Consultas de 
+            <span className="tarot-gradient"> Tarot Personalizadas</span>
+          </h1>
+          <Paragraph className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Descubre los misterios del Sol y la Luna a través de lecturas personalizadas 
+            con la Maestra Atenea. Cada consulta es única y diseñada para iluminar tu camino.
         </Paragraph>
         </div>
-      </Container>
-      
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {magicServices.map((service, index) => (
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {magicPlans.map((plan, index) => (
             <div 
-              key={index} 
-              className={`relative h-full rounded-3xl overflow-hidden transition-all duration-500 transform hover:-translate-y-2`}
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
-              style={{
-                boxShadow: hoveredCard === index 
-                  ? `0 20px 50px ${service.shadowColor}` 
-                  : '0 10px 30px rgba(0,0,0,0.2)',
-                transition: 'all 0.5s ease'
-              }}
+              key={plan.id}
+              className={`group relative modern-card premium-shadow p-8 lg:p-10 transition-all duration-700 hover:scale-105 tarot-decoration
+                ${index === 1 ? 'border-4 border-orange-400 sol-luna-glow' : ''}
+                ${index === 0 ? 'cosmic-gradient' : index === 1 ? 'sol-gradient' : 'luna-gradient'}
+              `}
             >
-              <div className={`h-full bg-gradient-to-br ${hoveredCard === index ? service.hoverColor : service.color} p-[3px] rounded-3xl`}>
-                <div className="h-full w-full rounded-3xl p-6 flex flex-col relative backdrop-blur-sm border border-gray-800/50">
-                  {service.featured && (
-                    <div className="absolute -top-3 right-6 bg-amber-500 text-black text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                      Destacado
+              {/* Marca de plan recomendado */}
+              {index === 1 && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-orange-400 to-rose-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    ✨ Más Popular
+                  </div>
                     </div>
                   )}
                   
-                  <div className="flex items-center mb-4">
-                    <div className={`text-white p-2 rounded-full mr-3 bg-gradient-to-br ${service.color}`}>
-                      {getIcon(service.icon)}
+              {/* Borde decorativo */}
+              <div className="absolute inset-0 rounded-3xl cosmic-border opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <div className="mb-8">
+                  <div className={`w-20 h-20 rounded-3xl flex items-center justify-center mb-6 
+                    ${index === 0 ? 'bg-indigo-500' : index === 1 ? 'bg-orange-500' : 'bg-slate-500'}
+                    sol-luna-glow transform group-hover:scale-110 transition-transform duration-500`}>
+                    {plan.icon === "book" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0118 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                      </svg>
+                    ) : plan.icon === "sun" ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                      </svg>
+                    ) : (
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10 text-white">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                      </svg>
+                    )}
                     </div>
-                    <h3 className="text-2xl font-semibold text-white">
-                      {service.title}
+                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-purple-600 transition-all duration-500">
+                    {plan.title}
                   </h3>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
+                  <p className="text-slate-600 mb-6 leading-relaxed">
+                    {plan.description}
                   </p>
-                  
-                  <ul className="flex-1 space-y-3 text-gray-300">
-                    {service.details.map((detail, keyDetail) => (
-                      <li key={keyDetail} className="flex items-start gap-2">
-                        <span className="text-purple-400 mt-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                        </span>
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="mt-8">
-                    <a 
-                      href={`https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestro%20Alaric%2C%20me%20interesa%20una%20consulta%20sobre%20${encodeURIComponent(service.title)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-full inline-block py-3 px-6 text-center rounded-xl bg-gradient-to-r ${service.color} 
-                                  text-white font-medium transition-all duration-300 transform 
-                                  hover:scale-105 hover:shadow-lg hover:${service.hoverColor}`}
-                    >
-                      Consultar Servicio
-                    </a>
+                  <div className="flex items-baseline gap-2 mb-6">
+                    <span className="text-4xl lg:text-5xl font-bold tarot-gradient">
+                      ${plan.price}
+                    </span>
+                    <span className="text-slate-500 text-lg">
+                      {plan.currency}
+                    </span>
                   </div>
+                  </div>
+                  
+                <div className="mb-8">
+                  <div className="space-y-4">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-400 to-purple-600 flex items-center justify-center mt-0.5">
+                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <p className="text-slate-700 leading-relaxed">
+                          {feature}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="text-center">
+                  <BtnLink
+                    href={plan.whatsappLink}
+                    text="Solicitar Consulta"
+                    className={`w-full justify-center py-4 px-8 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl
+                      ${index === 1 
+                        ? 'bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 text-white sol-luna-glow hover:from-orange-500 hover:via-rose-600 hover:to-purple-700' 
+                        : 'bg-gradient-to-r from-slate-600 to-slate-700 text-white hover:from-slate-700 hover:to-slate-800'
+                      }
+                    `}
+                  />
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </Container>
       
-      {/* Mensaje de confidencialidad */}
-      <Container className="mt-16">
-        <div className="max-w-4xl mx-auto rounded-2xl p-6 border border-purple-900/30 backdrop-blur-sm shadow-lg">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-700 to-pink-600 rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z" clipRule="evenodd" />
+        {/* Sección de confidencialidad */}
+        <div className="mt-20 lg:mt-32">
+          <div className="modern-card premium-shadow p-8 lg:p-12 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
+                </div>
               </div>
+              
+              <h3 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6">
+                Confidencialidad y Privacidad Garantizada
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-left">
+                <div>
+                  <h4 className="text-xl font-semibold text-slate-800 mb-4">
+                    🔒 Consultas Privadas
+                  </h4>
+                  <Paragraph className="text-slate-600 leading-relaxed">
+                    Todas las consultas son completamente confidenciales. Tu información personal 
+                    y las revelaciones de las cartas se mantienen en absoluto secreto.
+                  </Paragraph>
             </div>
             <div>
-              <h4 className="text-xl font-semibold text-white mb-2">100% Confidencial y Personalizado</h4>
-              <p className="text-gray-300">
-                Todos los rituales son realizados de forma personalizada por el Maestro Alaric, 
-                adaptándose a tu situación específica para maximizar su efectividad. Garantizamos 
-                total confidencialidad y discreción en cada consulta y ritual.
-              </p>
+                  <h4 className="text-xl font-semibold text-slate-800 mb-4">
+                    ⭐ Experiencia Personalizada
+                  </h4>
+                  <Paragraph className="text-slate-600 leading-relaxed">
+                    Cada lectura es única y personalizada según tu situación específica. 
+                    La Maestra Atenea canaliza las energías cósmicas para darte la guía más precisa.
+                  </Paragraph>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        
+        {/* Partículas flotantes adicionales */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={`float-particle-${i}`}
+              className="absolute animate-float-gentle"
+              style={{
+                width: `${4 + Math.random() * 8}px`,
+                height: `${4 + Math.random() * 8}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                background: `radial-gradient(circle, ${
+                  Math.random() > 0.5 ? 'rgba(251, 146, 60, 0.3)' : 'rgba(148, 163, 184, 0.3)'
+                } 0%, transparent 70%)`,
+                borderRadius: '50%',
+                filter: 'blur(2px)',
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${10 + Math.random() * 8}s`,
+                opacity: 0.5
+              }}
+            />
+          ))}
+        </div>
       </Container>
-      
-      {/* Añadimos estilos para animaciones */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @keyframes textShimmer {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-          }
-          
-          @keyframes mystic-float {
-            0% { transform: translateY(0) translateX(0) rotate(0deg); }
-            33% { transform: translateY(-8px) translateX(5px) rotate(2deg); }
-            66% { transform: translateY(5px) translateX(-7px) rotate(-1deg); }
-            100% { transform: translateY(0) translateX(0) rotate(0deg); }
-          }
-        `
-      }} />
     </section>
   );
 };
