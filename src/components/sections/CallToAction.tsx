@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export const CTA = () => {
   return (
-    <section className="-mt-52 py-24 relative" style={{ background: 'transparent' }}>
+    <section className="py-24 relative bg-gradient-to-b from-transparent via-purple-800/30 to-transparent">
       <Container>
         <div className="relative z-10 text-center max-w-2xl mx-auto p-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
@@ -18,16 +18,16 @@ export const CTA = () => {
                 textShadow: '0 0 20px rgba(139, 92, 246, 0.5), 0 0 30px rgba(236, 72, 153, 0.3)'
               }}
             >
-              Maestro Alaric
+              Maestra Atenea
             </span>{" "}
             cambia tu destino hoy
           </h1>
           <Paragraph className="mb-10 text-lg text-gray-200">
-            El Maestro Alaric te guía con sabiduría ancestral para resolver problemas de amor, prosperidad y protección. ¡Transforma tu vida hoy mismo con una consulta confidencial y resultados garantizados!
+            La Maestra Atenea te guía con sabiduría ancestral para resolver problemas de amor, prosperidad y protección. ¡Transforma tu vida hoy mismo con una consulta confidencial y resultados garantizados!
           </Paragraph>
           <div className="mx-auto max-w-md">
             <a 
-              href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestro%20Alaric%2C%20quiero%20una%20consulta%20espiritual" 
+              href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20quiero%20una%20consulta%20espiritual" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-green-700 to-emerald-900 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-300"
@@ -86,11 +86,11 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="-mt-88 py-20">
+    <section className="py-20 bg-gradient-to-b from-transparent via-indigo-800/25 to-transparent">
       <Container>
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Contacto directo</h2>
-          <p className="mb-10 text-gray-300">¿Prefieres que te contactemos? Déjanos tus datos y el Maestro Alaric se comunicará contigo personalmente.</p>
+          <p className="mb-10 text-gray-300">¿Prefieres que te contactemos? Déjanos tus datos y la Maestra Atenea se comunicará contigo personalmente.</p>
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <input
               type="text"
@@ -148,7 +148,7 @@ export const ContactForm = () => {
               <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span>¡Mensaje enviado con éxito! Pronto recibirás respuesta del Maestro Alaric.</span>
+              <span>¡Mensaje enviado con éxito! Pronto recibirás respuesta de la Maestra Atenea.</span>
             </div>
             <style>{`
               @keyframes fade-in-up {

@@ -3,7 +3,7 @@ import { Paragraph } from "../shared/Paragraph";
 
 export const AboutUs = () => {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-indigo-900/20 to-transparent">
       {/* Fondo celestial */}
       <div className="absolute inset-0 celestial-gradient"></div>
       

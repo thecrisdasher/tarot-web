@@ -7,6 +7,9 @@ import { Hero } from "./components/sections/Hero";
 import { Pricing } from "./components/sections/Pricing";
 import { Services } from "./components/sections/Services";
 import { ContactForm } from "./components/sections/CallToAction";
+import { BankTransfer } from "./components/sections/BankTransfer";
+import { BookingCalendar } from "./components/sections/BookingCalendar";
+import { BookingConfirmation } from "./components/sections/BookingConfirmation";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -22,7 +25,7 @@ function App() {
   }, []);
   
   return (
-    <Layout title="Maestro Alaric">
+    <Layout title="Tarot Sol y Luna">
       <section id="hero">
         <Hero />
       </section>
@@ -35,6 +38,9 @@ function App() {
         <Pricing />
       </section>
       <CTA />
+      <BookingCalendar />
+      <BankTransfer />
+      <BookingConfirmation />
       <div id="testimonios"></div>
       <section id="contacto">
         <ContactForm />
@@ -43,7 +49,7 @@ function App() {
       
       {/* Botón flotante de WhatsApp */}
       <a
-        href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestro%20Alaric%2C%20me%20interesa%20una%20consulta"
+        href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta"
         target="_blank"
         rel="noopener noreferrer"
         className={`fixed bottom-6 right-6 z-50 transition-all duration-500 transform ${

@@ -38,7 +38,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative pt-32 lg:pt-40 pb-16 md:pb-24 overflow-hidden min-h-screen flex items-center">
+    <section className="relative pt-32 lg:pt-40 pb-16 md:pb-24 overflow-hidden min-h-screen flex items-center bg-gradient-to-b from-transparent via-purple-900/15 to-transparent">
       {/* Fondo celestial ultra moderno */}
       <div className="absolute inset-0 celestial-gradient"></div>
       
@@ -105,61 +105,55 @@ export const Hero = () => {
         {/* Título principal */}
         <div className="relative flex flex-col items-center text-center max-w-4xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-heading-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight relative">
-              {/* Efecto de resplandor detrás del texto */}
-              <div className="absolute inset-0 blur-2xl opacity-30">
-                <span className="block mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Tarot</span>
-                <span className="tarot-gradient font-extrabold">Sol y Luna</span>
-              </div>
-              
-              {/* Texto principal */}
-              <span className="relative block mb-4 bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent font-extrabold animate-pulse">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight relative">
+              {/* Texto principal con mejor contraste */}
+              <span className="relative block mb-4 text-white font-extrabold drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.8)' }}>
                 Tarot
               </span>
-              <span className="relative tarot-gradient animate-text-glow font-extrabold text-shadow-lg">
+              <span className="relative block tarot-gradient animate-text-glow font-extrabold drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.8)' }}>
                 Sol y Luna
               </span>
               
-              {/* Subtítulo mejorado */}
+              {/* Subtítulo mejorado con mejor contraste */}
               <div className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light relative">
-                <span className="text-slate-200 font-light">con </span>
-                <span className="font-bold bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent animate-text-glow">
+                <span className="text-white font-light drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>con </span>
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 animate-text-glow drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                   Maestra Atenea
                 </span>
               </div>
-            </h1>
+          </h1>
           </div>
           
-          <Paragraph className="mt-8 md:mt-12 text-slate-200 leading-relaxed text-xl max-w-4xl relative">
-            <span className="bg-gradient-to-r from-slate-200 via-purple-200 to-slate-200 bg-clip-text text-transparent font-medium">
-              ✨ Descubre los misterios del universo a través de la sabiduría ancestral del tarot. ✨
+          {/* Párrafo con mejor legibilidad */}
+          <Paragraph className="mt-8 md:mt-12 leading-relaxed text-xl max-w-4xl relative bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <span className="text-white font-semibold text-center block mb-3" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+              ✨ Descubre los misterios del universo a través de la sabiduría ancestral del tarot ✨
             </span>
-            <br />
-            <span className="text-purple-200 font-light mt-2 block">
-              La Maestra Atenea te guiará en un viaje de autodescubrimiento, revelando los secretos 
-              que el Sol y la Luna tienen guardados para ti.
+            <span className="text-gray-200 font-normal block text-center" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.6)' }}>
+            La Maestra Atenea te guiará en un viaje de autodescubrimiento, revelando los secretos 
+            que el Sol y la Luna tienen guardados para ti.
             </span>
           </Paragraph>
         </div>
 
         {/* Rueda Zodiacal - Elemento principal atractivo */}
         <div className="relative mb-12">
-          {/* Efectos de partículas alrededor de la rueda */}
+          {/* Efectos de partículas reducidos para mejor legibilidad */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(15)].map((_, i) => (
+            {[...Array(8)].map((_, i) => (
               <div
                 key={`cosmic-particle-${i}`}
-                className="absolute animate-float-gentle opacity-40"
+                className="absolute animate-float-gentle opacity-30"
                 style={{
-                  width: `${4 + Math.random() * 8}px`,
-                  height: `${4 + Math.random() * 8}px`,
+                  width: `${4 + Math.random() * 6}px`,
+                  height: `${4 + Math.random() * 6}px`,
                   background: `linear-gradient(45deg, ${Math.random() > 0.5 ? '#E100FF' : '#00A7FF'}, #FFFFFF)`,
                   borderRadius: '50%',
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                   animationDelay: `${Math.random() * 6}s`,
                   animationDuration: `${5 + Math.random() * 4}s`,
-                  boxShadow: '0 0 15px currentColor'
+                  boxShadow: '0 0 10px currentColor'
                 }}
               />
             ))}
@@ -176,29 +170,22 @@ export const Hero = () => {
             <div className="h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent w-32"></div>
           </div>
           
-          <div className="mb-10 relative">
-            {/* Efecto de resplandor detrás del título */}
-            <div className="absolute inset-0 blur-xl opacity-30">
-              <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                🌟 Inicia Tu Viaje Cósmico 🌟
-              </h3>
-            </div>
-            
-            <h3 className="relative text-3xl lg:text-4xl font-bold text-white mb-6 animate-text-glow">
+          <div className="mb-10 relative bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <h3 className="relative text-3xl lg:text-4xl font-bold text-white mb-6 animate-text-glow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
               🌟 Inicia Tu Viaje Cósmico 🌟
             </h3>
             
-            <p className="text-slate-200 text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-white text-xl max-w-3xl mx-auto leading-relaxed" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.6)' }}>
               <span className="text-purple-300 font-semibold">Déjanos tu email</span> y la Maestra Atenea te contactará para 
               <span className="text-pink-300 font-semibold"> revelar los misterios</span> que el universo tiene preparados para ti.
             </p>
           </div>
           
           <div className="w-full flex max-w-2xl mx-auto">
-            <form
-              onSubmit={handleSubmit}
+              <form
+                onSubmit={handleSubmit}
               className="w-full ultra-glass rounded-full p-4 flex gap-4 items-center hover:shadow-2xl transition-all duration-500 group border-2 border-purple-400/40 hover:border-purple-400/80 relative overflow-hidden"
-            >
+              >
               {/* Efecto de brillo animado en el formulario */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer-advanced"></div>
               
@@ -232,28 +219,28 @@ export const Hero = () => {
                   disabled={enviando || enviado}
                 />
               </div>
-              <button
-                type="submit"
-                disabled={enviando || enviado}
+                <button
+                  type="submit"
+                  disabled={enviando || enviado}
                 className="min-w-max text-white px-10 py-5 rounded-full bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 hover:from-orange-500 hover:via-rose-600 hover:to-purple-700 font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed sol-luna-glow relative overflow-hidden"
               >
                 {/* Efecto de brillo en el botón */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 animate-shimmer-advanced"></div>
-                <span className="relative z-10">
+                <span className="relative z-10" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
                   {enviado ? "✨ ¡Enviado! ✨" : enviando ? "🔮 Enviando..." : "🌟 Comenzar mi consulta 🌟"}
                 </span>
-              </button>
-            </form>
+                </button>
+              </form>
           </div>
           
-          {showToast && (
-            <div className="fixed left-1/2 bottom-10 transform -translate-x-1/2 z-50">
-              <div className="modern-card text-slate-800 px-8 py-6 flex items-center gap-4 animate-bounce border border-emerald-200">
+              {showToast && (
+                <div className="fixed left-1/2 bottom-10 transform -translate-x-1/2 z-50">
+              <div className="modern-card text-slate-800 px-8 py-6 flex items-center gap-4 animate-bounce border border-emerald-200 shadow-2xl">
                 <svg className="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
                 <span className="font-semibold text-lg">¡Tu consulta ha sido enviada con éxito!</span>
-              </div>
+                </div>
             </div>
           )}
         </div>

@@ -145,7 +145,7 @@ export const Numbers = () => {
                 Elementos
               </span>
             </h3>
-            <p className="mt-2 text-heading-3 transition-opacity duration-500 group-hover/tierra:text-green-400"> Maestro Alaric, hechicero elemental. Rituales de sanación, equilibrio y poder natural.</p>
+            <p className="mt-2 text-heading-3 transition-opacity duration-500 group-hover/tierra:text-green-400"> Maestra Atenea, hechicera elemental. Rituales de sanación, equilibrio y poder natural.</p>
           </div>
           <div className="text-center px-2 sm:px-3 lg:px-5 group/tarot">
             <div 

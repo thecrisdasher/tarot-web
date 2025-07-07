@@ -1,11 +1,27 @@
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
-import { BtnLink } from "../shared/BtnLink";
 import { magicPlans } from "../../utils/pricing-plan";
+import { useBookingStore } from "../../store/BookingStore";
 
 export const Pricing = () => {
+  const { setSelectedService } = useBookingStore();
+
+  const handleSelectPlan = (plan: typeof magicPlans[0]) => {
+    setSelectedService({
+      id: plan.id,
+      title: plan.title,
+      price: plan.price,
+      description: plan.description
+    });
+    
+    // Scroll to calendar section
+    document.getElementById('calendario')?.scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  };
+
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-900/30 to-transparent">
       {/* Fondo celestial */}
       <div className="absolute inset-0 celestial-gradient"></div>
       
@@ -38,14 +54,14 @@ export const Pricing = () => {
       
       <Container className="relative z-10">
         <div className="text-center mb-16 lg:mb-24">
-          <h1 className="text-4xl lg:text-6xl font-bold text-slate-800 mb-6">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.8)' }}>
             Consultas de 
             <span className="tarot-gradient"> Tarot Personalizadas</span>
           </h1>
-          <Paragraph className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="text-xl text-white max-w-3xl mx-auto leading-relaxed bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}>
             Descubre los misterios del Sol y la Luna a través de lecturas personalizadas 
             con la Maestra Atenea. Cada consulta es única y diseñada para iluminar tu camino.
-        </Paragraph>
+        </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -60,7 +76,7 @@ export const Pricing = () => {
               {/* Marca de plan recomendado */}
               {index === 1 && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-orange-400 to-rose-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  <div className="bg-gradient-to-r from-orange-400 to-rose-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg drop-shadow-lg">
                     ✨ Más Popular
                   </div>
                     </div>
@@ -88,17 +104,17 @@ export const Pricing = () => {
                       </svg>
                     )}
                     </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-purple-600 transition-all duration-500">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-purple-600 transition-all duration-500 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.8)' }}>
                     {plan.title}
                   </h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
+                  <p className="text-slate-700 mb-6 leading-relaxed font-medium drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.7)' }}>
                     {plan.description}
                   </p>
                   <div className="flex items-baseline gap-2 mb-6">
-                    <span className="text-4xl lg:text-5xl font-bold tarot-gradient">
-                      ${plan.price}
+                    <span className="text-4xl lg:text-5xl font-bold tarot-gradient drop-shadow-lg">
+                      €{plan.price}
                     </span>
-                    <span className="text-slate-500 text-lg">
+                    <span className="text-slate-600 text-lg font-semibold" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.6)' }}>
                       {plan.currency}
                     </span>
                   </div>
@@ -108,12 +124,12 @@ export const Pricing = () => {
                   <div className="space-y-4">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-400 to-purple-600 flex items-center justify-center mt-0.5">
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-400 to-purple-600 flex items-center justify-center mt-0.5 shadow-lg">
                           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <p className="text-slate-700 leading-relaxed">
+                        <p className="text-slate-800 leading-relaxed font-medium drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.6)' }}>
                           {feature}
                         </p>
                       </div>
@@ -122,52 +138,54 @@ export const Pricing = () => {
                 </div>
                 
                 <div className="text-center">
-                  <BtnLink
-                    href={plan.whatsappLink}
-                    text="Solicitar Consulta"
-                    className={`w-full justify-center py-4 px-8 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl
+                  <button
+                    onClick={() => handleSelectPlan(plan)}
+                    className={`w-full justify-center py-4 px-8 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl drop-shadow-lg
                       ${index === 1 
                         ? 'bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 text-white sol-luna-glow hover:from-orange-500 hover:via-rose-600 hover:to-purple-700' 
                         : 'bg-gradient-to-r from-slate-600 to-slate-700 text-white hover:from-slate-700 hover:to-slate-800'
                       }
                     `}
-                  />
+                    style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
+                  >
+                    📅 Agendar Consulta
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
       
-        {/* Sección de confidencialidad */}
+        {/* Sección de confidencialidad con mejor contraste */}
         <div className="mt-20 lg:mt-32">
-          <div className="modern-card premium-shadow p-8 lg:p-12 text-center">
+          <div className="modern-card premium-shadow p-8 lg:p-12 text-center bg-white/95 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 </div>
               </div>
               
-              <h3 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6">
+              <h3 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6 drop-shadow-sm">
                 Confidencialidad y Privacidad Garantizada
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-left">
                 <div>
-                  <h4 className="text-xl font-semibold text-slate-800 mb-4">
+                  <h4 className="text-xl font-semibold text-slate-800 mb-4 drop-shadow-sm">
                     🔒 Consultas Privadas
                   </h4>
-                  <Paragraph className="text-slate-600 leading-relaxed">
+                  <Paragraph className="text-slate-700 leading-relaxed font-medium">
                     Todas las consultas son completamente confidenciales. Tu información personal 
                     y las revelaciones de las cartas se mantienen en absoluto secreto.
                   </Paragraph>
             </div>
             <div>
-                  <h4 className="text-xl font-semibold text-slate-800 mb-4">
+                  <h4 className="text-xl font-semibold text-slate-800 mb-4 drop-shadow-sm">
                     ⭐ Experiencia Personalizada
                   </h4>
-                  <Paragraph className="text-slate-600 leading-relaxed">
+                  <Paragraph className="text-slate-700 leading-relaxed font-medium">
                     Cada lectura es única y personalizada según tu situación específica. 
                     La Maestra Atenea canaliza las energías cósmicas para darte la guía más precisa.
                   </Paragraph>

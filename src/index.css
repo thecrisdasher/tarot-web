@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600&family=Poppins:wght@400;500;600;700;800;900&family=Lilita+One&display=swap');
+@import "tailwindcss";
 
 @theme {
   --color-bg: 250 249 246;
@@ -88,6 +88,17 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Asegurar que no haya espacios en blanco */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {

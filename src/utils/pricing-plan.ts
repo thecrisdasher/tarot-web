@@ -35,8 +35,8 @@ export const magicPlans = [
   {
     id: 1,
     title: "Consulta Básica",
-    price: 35,
-    currency: "USD",
+    price: 20,
+    currency: "EUR",
     description: "Lectura de 3 cartas para preguntas específicas sobre amor, trabajo o situaciones personales.",
     features: [
       "Lectura de 3 cartas del tarot",
@@ -51,8 +51,8 @@ export const magicPlans = [
   {
     id: 2,
     title: "Consulta Completa",
-    price: 65,
-    currency: "USD",
+    price: 35,
+    currency: "EUR",
     description: "Lectura completa del Sol y la Luna con análisis profundo de tu situación actual y futuro.",
     features: [
       "Lectura completa de 10 cartas",
@@ -70,8 +70,8 @@ export const magicPlans = [
   {
     id: 3,
     title: "Consulta Premium",
-    price: 120,
-    currency: "USD",
+    price: 60,
+    currency: "EUR",
     description: "Experiencia completa con lectura personalizada, ritual de manifestación y guía espiritual.",
     features: [
       "Lectura personalizada de 15 cartas",

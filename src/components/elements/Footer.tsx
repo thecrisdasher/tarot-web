@@ -2,7 +2,7 @@ import { Container } from "../shared/Container";
 
 export const Footer = () => {
   return (
-    <footer className="relative py-16 lg:py-24 overflow-hidden">
+    <footer className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-transparent via-purple-900/25 to-transparent">
       {/* Fondo celestial */}
       <div className="absolute inset-0 celestial-gradient"></div>
       

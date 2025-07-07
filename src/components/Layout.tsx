@@ -13,9 +13,9 @@ export const Layout = ({ title, children }: LayoutProps) => {
   }, [title]);
   
   return (
-    <div className="min-h-screen bg-body">
+    <div className="min-h-screen">
       <Navbar />
-      <main className="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+      <main className="flex flex-col overflow-hidden">
         {children}
       </main>
       <Footer />
