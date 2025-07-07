@@ -1,14 +1,16 @@
+import { FC } from "react";
+
 interface NavItemProps {
   href: string;
   text: string;
 }
 
-export const NavItem = ({ href, text }: NavItemProps) => {
+export const NavItem: FC<NavItemProps> = ({ href, text }) => {
   return (
     <li>
       <a
         href={href}
-        className="duration-300 font-medium ease-linear hover:text-primary py-3"
+        className="relative text-white font-medium text-lg tracking-wide transition-all duration-300 hover:text-yellow-300 nav-text-glow"
       >
         {text}
       </a>

@@ -38,122 +38,219 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative pt-32 lg:pt-40 pb-16 md:pb-24 overflow-hidden min-h-screen flex items-center bg-gradient-to-b from-transparent via-purple-900/15 to-transparent">
-      {/* Fondo celestial ultra moderno */}
+    <section className="section-transition relative pt-32 lg:pt-40 pb-16 md:pb-24 overflow-hidden min-h-screen flex items-center">
+      {/* Nebulosas de transición */}
+      <div className="nebula-transition top"></div>
+      <div className="nebula-transition bottom"></div>
+
+      {/* Fondo celestial refinado */}
       <div className="absolute inset-0 celestial-gradient"></div>
       
       {/* Elementos decorativos del Sol y Luna */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Sol mejorado */}
+        {/* Sol refinado */}
         <div className="absolute top-16 right-16 w-40 h-40 rounded-full sol-gradient animate-pulse-cosmic opacity-70 zodiac-sign-glow">
-          <div className="absolute inset-4 rounded-full bg-gradient-to-br from-orange-300 to-yellow-400 animate-float-gentle shadow-2xl"></div>
-          <div className="absolute inset-8 rounded-full bg-gradient-to-br from-yellow-200 to-orange-200 animate-pulse opacity-80"></div>
-          {/* Rayos de sol */}
-          {[...Array(8)].map((_, i) => (
+          <div className="absolute inset-4 rounded-full bg-gradient-to-br from-orange-300 to-yellow-400 animate-float-gentle shadow-2xl">
+            {/* Corona solar sutil */}
+            {[...Array(8)].map((_, i) => (
+              <div
+                key={`corona-${i}`}
+                className="absolute w-full h-full"
+                style={{
+                  transform: `rotate(${i * 45}deg)`,
+                }}
+              >
+                <div 
+                  className="absolute top-0 left-1/2 w-0.5 h-10 bg-gradient-to-t from-transparent via-yellow-300 to-transparent opacity-40 animate-cosmic-shimmer"
+                  style={{
+                    transformOrigin: 'bottom center',
+                    animationDelay: `${i * 0.3}s`
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="absolute inset-8 rounded-full bg-gradient-to-br from-yellow-200 to-orange-200 animate-pulse opacity-60"></div>
+        </div>
+        
+        {/* Luna refinada */}
+        <div className="absolute bottom-28 left-12 w-36 h-36 rounded-full luna-gradient animate-pulse-cosmic opacity-70 zodiac-sign-glow">
+          <div className="absolute inset-3 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 animate-float-gentle shadow-2xl" style={{animationDelay: '1s'}}>
+            {/* Halo lunar sutil */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-20 animate-cosmic-shimmer"></div>
+          </div>
+          <div className="absolute inset-6 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 animate-pulse opacity-50" style={{animationDelay: '1.5s'}}></div>
+          {/* Cráteres lunares sutiles */}
+          {[...Array(3)].map((_, i) => (
             <div
-              key={`sun-ray-${i}`}
-              className="absolute w-1 h-8 bg-gradient-to-t from-transparent to-yellow-300 opacity-60 animate-pulse"
+              key={`crater-${i}`}
+              className="absolute rounded-full bg-slate-500 opacity-30"
               style={{
-                top: '-16px',
-                left: '50%',
-                transformOrigin: '50% 32px',
-                transform: `translateX(-50%) rotate(${i * 45}deg)`,
-                animationDelay: `${i * 0.2}s`
+                width: `${2 + Math.random() * 2}px`,
+                height: `${2 + Math.random() * 2}px`,
+                top: `${30 + Math.random() * 40}%`,
+                left: `${30 + Math.random() * 40}%`,
               }}
             />
           ))}
         </div>
         
-        {/* Luna mejorada */}
-        <div className="absolute bottom-28 left-12 w-36 h-36 rounded-full luna-gradient animate-pulse-cosmic opacity-80 zodiac-sign-glow">
-          <div className="absolute inset-3 rounded-full bg-gradient-to-br from-slate-300 to-slate-400 animate-float-gentle shadow-2xl" style={{animationDelay: '1s'}}></div>
-          <div className="absolute inset-6 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 animate-pulse opacity-70" style={{animationDelay: '1.5s'}}></div>
-          {/* Cráteres lunares */}
-          <div className="absolute top-4 left-6 w-2 h-2 rounded-full bg-slate-500 opacity-40"></div>
-          <div className="absolute top-8 right-8 w-1 h-1 rounded-full bg-slate-600 opacity-30"></div>
-          <div className="absolute bottom-6 left-8 w-1.5 h-1.5 rounded-full bg-slate-500 opacity-35"></div>
-        </div>
-        
-        {/* Constelación de estrellas mejorada */}
-        {[...Array(12)].map((_, i) => (
+        {/* Constelaciones refinadas */}
+        {[...Array(10)].map((_, i) => (
           <div 
-            key={`star-${i}`}
-            className="absolute animate-celestial-dance opacity-70"
-            style={{
-              width: `${6 + Math.random() * 10}px`,
-              height: `${6 + Math.random() * 10}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: `linear-gradient(45deg, ${
-                Math.random() > 0.5 ? '#E100FF' : '#00A7FF'
-              }, #FFFFFF)`,
-              clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
-              boxShadow: '0 0 10px currentColor'
-            }}
-          />
+            key={`constellation-${i}`}
+            className="absolute animate-celestial-dance opacity-60"
+          >
+            <div
+              className="absolute animate-cosmic-shimmer"
+              style={{
+                width: `${4 + Math.random() * 6}px`,
+                height: `${4 + Math.random() * 6}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                background: `linear-gradient(45deg, ${
+                  Math.random() > 0.5 ? '#E100FF' : '#00A7FF'
+                }, #FFFFFF)`,
+                clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+                animationDelay: `${Math.random() * 4}s`,
+                animationDuration: `${6 + Math.random() * 4}s`,
+                boxShadow: '0 0 10px currentColor'
+              }}
+            />
+            {/* Líneas de constelación sutiles */}
+            {Math.random() > 0.7 && (
+              <div
+                className="absolute h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent opacity-20"
+                style={{
+                  width: `${20 + Math.random() * 30}px`,
+                  transform: `rotate(${Math.random() * 360}deg)`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+              />
+            )}
+          </div>
         ))}
         
-        {/* Nebulosas de fondo */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-gradient-to-r from-purple-600/10 to-transparent blur-3xl animate-pulse opacity-60"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 rounded-full bg-gradient-to-l from-blue-600/10 to-transparent blur-2xl animate-pulse opacity-50" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/4 w-56 h-56 rounded-full bg-gradient-to-b from-pink-600/10 to-transparent blur-3xl animate-pulse opacity-40" style={{animationDelay: '1s'}}></div>
+        {/* Nebulosas sutiles */}
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-gradient-to-r from-purple-600/10 via-pink-500/5 to-transparent blur-2xl animate-cosmic-shimmer opacity-40"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-gradient-to-l from-blue-600/10 via-cyan-500/5 to-transparent blur-xl animate-cosmic-shimmer opacity-30" style={{animationDelay: '2s'}}></div>
       </div>
       
       <Container className="flex flex-col gap-12 lg:gap-16 relative z-10">
-        {/* Título principal */}
+        {/* Título principal refinado */}
         <div className="relative flex flex-col items-center text-center max-w-4xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight relative">
-              {/* Texto principal con mejor contraste */}
-              <span className="relative block mb-4 text-white font-extrabold drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.8)' }}>
-                Tarot
-              </span>
-              <span className="relative block tarot-gradient animate-text-glow font-extrabold drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.8)' }}>
-                Sol y Luna
+            <h1 className="relative leading-tight tracking-wide">
+              {/* Título "Tarot" refinado */}
+              <span 
+                className="relative block mb-8 premium-title animate-luxury-glow text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]" 
+                style={{ 
+                  letterSpacing: '0.2em',
+                  fontFamily: 'Cormorant Garamond, serif',
+                  fontWeight: '600'
+                }}
+              >
+                𝒯𝒶𝓇𝑜𝓉
+                {/* Destellos sutiles */}
+                <div className="absolute -inset-4 opacity-30">
+                  {[...Array(6)].map((_, i) => (
+                    <div
+                      key={`sparkle-${i}`}
+                      className="absolute w-1.5 h-1.5 bg-white rounded-full animate-cosmic-shimmer"
+                      style={{
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${i * 0.4}s`
+                      }}
+                    />
+                  ))}
+                </div>
               </span>
               
-              {/* Subtítulo mejorado con mejor contraste */}
-              <div className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light relative">
-                <span className="text-white font-light drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>con </span>
-                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 animate-text-glow drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-                  Maestra Atenea
-                </span>
+              {/* "Sol y Luna" refinado */}
+              <span 
+                className="relative block elegant-subtitle animate-luxury-glow font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" 
+                style={{ 
+                  letterSpacing: '0.3em',
+                  fontFamily: 'Cinzel, serif',
+                  fontWeight: '500'
+                }}
+              >
+                Sol y Luna
+                {/* Línea decorativa sutil */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent opacity-40"></div>
+              </span>
+              
+              {/* Subtítulo refinado */}
+              <div className="mt-10 relative">
+                <div 
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light relative inline-block mystical-name"
+                  style={{ 
+                    fontFamily: 'Playfair Display, serif',
+                    letterSpacing: '0.15em'
+                  }}
+                >
+                  <span className="text-white/80 font-light" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}>con </span>
+                  <span className="mystical-name animate-luxury-glow font-medium">
+                    Maestra Atenea
+                  </span>
+                </div>
+                
+                {/* Ornamentos sutiles */}
+                <div className="mt-6 flex justify-center items-center gap-4">
+                  <div className="w-20 h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent opacity-40"></div>
+                  <div className="text-purple-300 text-xl animate-cosmic-shimmer">✧</div>
+                  <div className="w-20 h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent opacity-40"></div>
+                </div>
               </div>
-          </h1>
+            </h1>
           </div>
           
-          {/* Párrafo con mejor legibilidad */}
-          <Paragraph className="mt-8 md:mt-12 leading-relaxed text-xl max-w-4xl relative bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <span className="text-white font-semibold text-center block mb-3" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-              ✨ Descubre los misterios del universo a través de la sabiduría ancestral del tarot ✨
+          {/* Párrafo refinado */}
+          <Paragraph className="mt-12 md:mt-16 leading-relaxed text-xl max-w-4xl relative mystical-card p-8">
+            <span 
+              className="text-white font-medium text-center block mb-6 text-2xl" 
+              style={{ 
+                fontFamily: 'Playfair Display, serif',
+                textShadow: '0 2px 4px rgba(0,0,0,0.6)',
+                letterSpacing: '0.05em'
+              }}
+            >
+              ✧ Descubre los misterios del universo a través de la sabiduría ancestral del tarot ✧
             </span>
-            <span className="text-gray-200 font-normal block text-center" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.6)' }}>
-            La Maestra Atenea te guiará en un viaje de autodescubrimiento, revelando los secretos 
-            que el Sol y la Luna tienen guardados para ti.
+            <span 
+              className="text-gray-100 font-light block text-center text-lg leading-relaxed" 
+              style={{ 
+                fontFamily: 'Poppins, sans-serif',
+                textShadow: '0 1px 2px rgba(0,0,0,0.5)',
+                letterSpacing: '0.02em'
+              }}
+            >
+              La Maestra Atenea te guiará en un viaje de autodescubrimiento, revelando los secretos 
+              que el Sol y la Luna tienen guardados para ti.
             </span>
           </Paragraph>
         </div>
 
-        {/* Rueda Zodiacal - Elemento principal atractivo */}
+        {/* Rueda Zodiacal */}
         <div className="relative mb-12">
-          {/* Efectos de partículas reducidos para mejor legibilidad */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {/* Partículas cósmicas sutiles */}
             {[...Array(8)].map((_, i) => (
               <div
                 key={`cosmic-particle-${i}`}
                 className="absolute animate-float-gentle opacity-30"
                 style={{
-                  width: `${4 + Math.random() * 6}px`,
-                  height: `${4 + Math.random() * 6}px`,
+                  width: `${3 + Math.random() * 4}px`,
+                  height: `${3 + Math.random() * 4}px`,
                   background: `linear-gradient(45deg, ${Math.random() > 0.5 ? '#E100FF' : '#00A7FF'}, #FFFFFF)`,
                   borderRadius: '50%',
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                   animationDelay: `${Math.random() * 6}s`,
                   animationDuration: `${5 + Math.random() * 4}s`,
-                  boxShadow: '0 0 10px currentColor'
+                  boxShadow: '0 0 8px currentColor'
                 }}
               />
             ))}
@@ -161,88 +258,88 @@ export const Hero = () => {
           <ZodiacWheel />
         </div>
 
-        {/* Formulario de contacto */}
+        {/* Formulario de contacto refinado */}
         <div className="relative flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Separador decorativo */}
+          {/* Separador decorativo sutil */}
           <div className="w-full flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent w-32"></div>
-            <div className="mx-4 text-purple-400 text-2xl">✦</div>
-            <div className="h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent w-32"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent w-24"></div>
+            <div className="mx-4 text-purple-400 text-xl animate-cosmic-shimmer">✧</div>
+            <div className="h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent w-24"></div>
           </div>
           
-          <div className="mb-10 relative bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-            <h3 className="relative text-3xl lg:text-4xl font-bold text-white mb-6 animate-text-glow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-              🌟 Inicia Tu Viaje Cósmico 🌟
+          <div className="mb-10 relative mystical-card p-8">
+            <h3 
+              className="relative text-4xl lg:text-5xl font-medium text-white mb-8 animate-luxury-glow" 
+              style={{ 
+                fontFamily: 'Playfair Display, serif',
+                textShadow: '0 2px 6px rgba(0,0,0,0.6)',
+                letterSpacing: '0.05em'
+              }}
+            >
+              ✧ Inicia Tu Viaje Cósmico ✧
             </h3>
             
-            <p className="text-white text-xl max-w-3xl mx-auto leading-relaxed" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.6)' }}>
-              <span className="text-purple-300 font-semibold">Déjanos tu email</span> y la Maestra Atenea te contactará para 
-              <span className="text-pink-300 font-semibold"> revelar los misterios</span> que el universo tiene preparados para ti.
-            </p>
-          </div>
-          
-          <div className="w-full flex max-w-2xl mx-auto">
-              <form
-                onSubmit={handleSubmit}
-              className="w-full ultra-glass rounded-full p-4 flex gap-4 items-center hover:shadow-2xl transition-all duration-500 group border-2 border-purple-400/40 hover:border-purple-400/80 relative overflow-hidden"
+            <p 
+              className="text-white text-xl max-w-3xl mx-auto leading-relaxed" 
+              style={{ 
+                fontFamily: 'Poppins, sans-serif',
+                textShadow: '0 1px 3px rgba(0,0,0,0.5)',
+                letterSpacing: '0.02em'
+              }}
+            >
+              <span 
+                className="text-purple-200 font-medium" 
+                style={{ fontFamily: 'Playfair Display, serif' }}
               >
-              {/* Efecto de brillo animado en el formulario */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer-advanced"></div>
-              
-              <div className="flex items-center flex-1 px-6">
-                <div className="min-w-max pr-6 border-r border-purple-300/40">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-7 h-7 text-purple-400 group-hover:text-orange-400 transition-colors duration-300 group-hover:scale-110"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
-                    />
-                  </svg>
-                </div>
+                Déjanos tu email
+              </span> y la Maestra Atenea te contactará para 
+              <span 
+                className="text-pink-200 font-medium" 
+                style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic' }}
+              >
+                revelar los misterios
+              </span> que el universo tiene preparados para ti.
+            </p>
+            
+            {/* Formulario refinado */}
+            <form onSubmit={handleSubmit} className="mt-8 flex flex-col items-center gap-4">
+              <div className="relative w-full max-w-md">
                 <input
                   type="email"
-                  name="correo"
-                  placeholder="✨ tu@email.com ✨"
                   value={email}
                   onChange={handleChange}
+                  placeholder="Tu correo electrónico"
+                  className="w-full px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500/40 transition-all duration-300"
+                  style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    letterSpacing: '0.02em'
+                  }}
                   required
-                  className="w-full py-5 outline-none bg-transparent text-white placeholder-purple-300 font-medium text-xl"
-                  disabled={enviando || enviado}
                 />
+                {/* Efecto de brillo sutil */}
+                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/15 via-pink-500/15 to-purple-500/15 rounded-full blur-md"></div>
               </div>
-                <button
-                  type="submit"
-                  disabled={enviando || enviado}
-                className="min-w-max text-white px-10 py-5 rounded-full bg-gradient-to-r from-orange-400 via-rose-500 to-purple-600 hover:from-orange-500 hover:via-rose-600 hover:to-purple-700 font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed sol-luna-glow relative overflow-hidden"
+              
+              <button
+                type="submit"
+                disabled={enviando}
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-full text-white font-medium transform hover:scale-103 transition-all duration-300 animate-cosmic-shimmer"
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  letterSpacing: '0.05em'
+                }}
               >
-                {/* Efecto de brillo en el botón */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 animate-shimmer-advanced"></div>
-                <span className="relative z-10" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}>
-                  {enviado ? "✨ ¡Enviado! ✨" : enviando ? "🔮 Enviando..." : "🌟 Comenzar mi consulta 🌟"}
-                </span>
-                </button>
-              </form>
+                {enviando ? "Enviando..." : "Comenzar Mi Viaje Místico"}
+              </button>
+            </form>
+            
+            {/* Toast de confirmación refinado */}
+            {showToast && (
+              <div className="fixed bottom-4 right-4 px-6 py-4 bg-green-500/80 backdrop-blur-md rounded-lg text-white shadow-lg animate-cosmic-shimmer">
+                ✨ Tu mensaje ha sido enviado con éxito ✨
+              </div>
+            )}
           </div>
-          
-              {showToast && (
-                <div className="fixed left-1/2 bottom-10 transform -translate-x-1/2 z-50">
-              <div className="modern-card text-slate-800 px-8 py-6 flex items-center gap-4 animate-bounce border border-emerald-200 shadow-2xl">
-                <svg className="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                <span className="font-semibold text-lg">¡Tu consulta ha sido enviada con éxito!</span>
-                </div>
-            </div>
-          )}
         </div>
       </Container>
       {/* Componente Numbers temporalmente oculto */}
