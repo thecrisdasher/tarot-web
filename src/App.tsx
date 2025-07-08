@@ -49,7 +49,7 @@ function App() {
       
       {/* Botón flotante de WhatsApp */}
       <a
-        href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta"
+        href="https://api.whatsapp.com/send?phone=34611334653&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta"
         target="_blank"
         rel="noopener noreferrer"
         className={`fixed bottom-6 right-6 z-50 transition-all duration-500 transform ${

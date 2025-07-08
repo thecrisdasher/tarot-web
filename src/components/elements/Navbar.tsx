@@ -44,7 +44,7 @@ export const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
+            href="https://api.whatsapp.com/send?phone=34611334653&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -140,7 +140,7 @@ export const Navbar = () => {
               
               <div className="mt-6">
                 <a
-                  href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
+                  href="https://api.whatsapp.com/send?phone=34611334653&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300"

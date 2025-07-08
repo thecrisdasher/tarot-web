@@ -78,7 +78,7 @@ export const WhatsappContact = () => {
     {
       title: "Amarres de Amor",
       description: "Un ritual ancestral que une dos almas en un vínculo eterno, despertando la pasión y el deseo más profundo.",
-      number: "+34600000000",
+      number: "+34611334653",
       icon: "question-mark",
       gradient: "from-purple-900 via-red-800 to-rose-700",
       hoverGradient: "from-purple-800 via-red-700 to-rose-600",
@@ -89,7 +89,7 @@ export const WhatsappContact = () => {
     {
       title: "Limpieza Espiritual",
       description: "Purificación energética que elimina bloqueos, maldiciones y energías negativas para restaurar tu bienestar y equilibrio.",
-      number: "+34600000000",
+      number: "+34611334653",
       icon: "ritual",
       gradient: "from-emerald-900 via-emerald-700 to-green-600",
       hoverGradient: "from-emerald-800 via-emerald-600 to-green-500",
@@ -100,7 +100,7 @@ export const WhatsappContact = () => {
     {
       title: "Protección Espiritual",
       description: "Escudos místicos y talismanes poderosos que te protegen contra energías negativas, envidias y ataques espirituales.",
-      number: "+34600000000",
+      number: "+34611334653",
       icon: "emergency",
       gradient: "from-cyan-900 via-cyan-800 to-cyan-600",
       hoverGradient: "from-cyan-800 via-cyan-700 to-cyan-500",
@@ -172,7 +172,7 @@ export const WhatsappContact = () => {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <a
-                    href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta"
+                    href="https://api.whatsapp.com/send?phone=34611334653&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full h-full"

@@ -27,7 +27,7 @@ export const CTA = () => {
           </Paragraph>
           <div className="mx-auto max-w-md">
             <a 
-              href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20quiero%20una%20consulta%20espiritual" 
+              href="https://api.whatsapp.com/send?phone=34611334653&text=Hola%20Maestra%20Atenea%2C%20quiero%20una%20consulta%20espiritual" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-green-700 to-emerald-900 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-300"
@@ -50,7 +50,7 @@ export const CTA = () => {
 
 // Nueva sección: Formulario de contacto minimalista
 export const ContactForm = () => {
-  const [form, setForm] = useState({ nombre: '', correo: '', telefono: '', mensaje: '' });
+  const [form, setForm] = useState({ nombre: '', email: '', telefono: '', mensaje: '' });
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
   const [showToast, setShowToast] = useState(false);
@@ -73,12 +73,14 @@ export const ContactForm = () => {
     try {
       const response = await fetch("https://formspree.io/f/meogvbjj", {
         method: "POST",
-        headers: { "Accept": "application/json" },
+        headers: {
+          Accept: "application/json",
+        },
         body: new FormData(e.target as HTMLFormElement),
       });
       if (response.ok) {
         setEnviado(true);
-        setForm({ nombre: '', correo: '', telefono: '', mensaje: '' });
+        setForm({ nombre: '', email: '', telefono: '', mensaje: '' });
       }
     } finally {
       setEnviando(false);
@@ -103,9 +105,9 @@ export const ContactForm = () => {
             />
             <input
               type="email"
-              name="correo"
+              name="email"
               placeholder="Correo electrónico"
-              value={form.correo}
+              value={form.email}
               onChange={handleChange}
               required
               className="w-full px-5 py-3 rounded-xl border border-white bg-transparent text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition"

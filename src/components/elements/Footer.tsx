@@ -58,7 +58,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://api.whatsapp.com/send?phone=19145206230&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
+                href="https://api.whatsapp.com/send?phone=34611334653&text=Hola%20Maestra%20Atenea%2C%20me%20interesa%20una%20consulta%20de%20tarot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 flex items-center justify-center hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-110 shadow-lg"
@@ -68,7 +68,7 @@ export const Footer = () => {
                 </svg>
               </a>
               <a
-                href="mailto:maestraatenea@tarotsolyluna.com"
+                href="mailto:tarotsolyluna30@gmail.com"
                 className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-110 shadow-lg"
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -119,7 +119,7 @@ export const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <span className="text-slate-600">+1 (914) 520-6230</span>
+                <span className="text-slate-600">+34 611 334 653</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-purple-600 rounded-full flex items-center justify-center">
@@ -127,7 +127,7 @@ export const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-slate-600">maestraatenea@tarotsolyluna.com</span>
+                <span className="text-slate-600">tarotsolyluna30@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-purple-600 rounded-full flex items-center justify-center">

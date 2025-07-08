@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Paragraph } from "../shared/Paragraph";
 import { Title } from "../shared/Title";
 import { useBookingStore } from "../../store/BookingStore";
+import { Bank } from "phosphor-react";
 
 interface BankTransferProps {}
 
@@ -66,7 +67,7 @@ export const BankTransfer: React.FC<BankTransferProps> = () => {
     setEnviando(true);
 
     try {
-      const phone = "19145206230"; // Número de WhatsApp de destino
+      const phone = "34611334653"; // Número de WhatsApp de destino
       
       // Use booking message if available, otherwise use simple payment message
       const message = isBookingReady() 
@@ -205,26 +206,22 @@ export const BankTransfer: React.FC<BankTransferProps> = () => {
             <div className="mt-8 space-y-6">
               {/* Bancolombia */}
               <div className="flex items-center gap-4 bg-black/20 p-4 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-black/30 transition-colors">
-                <img
-                  src="/assets/images/qr-bancolombia.png"
-                  alt="QR Bancolombia"
-                  className="w-24 h-24 object-contain rounded-lg shadow-lg bg-white/90 p-2"
-                />
+                <div className="w-16 h-16 flex items-center justify-center rounded-lg shadow-lg bg-white/90">
+                  <Bank size={32} weight="bold" className="text-purple-700" />
+                </div>
                 <div>
-                  <p className="text-white font-semibold text-lg">Bancolombia</p>
-                  <p className="text-gray-300 text-sm">Cuenta de ahorros No. 123456789</p>
+                  <p className="text-white font-semibold text-lg">Cuenta bancaria</p>
+                  <p className="text-gray-300 text-sm">IBAN ES96 0182 0012 5202 0162 4260</p>
                 </div>
               </div>
               {/* Nequi */}
               <div className="flex items-center gap-4 bg-black/20 p-4 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-black/30 transition-colors">
-                <img
-                  src="/assets/images/qr-nequi.png"
-                  alt="QR Nequi"
-                  className="w-24 h-24 object-contain rounded-lg shadow-lg bg-white/90 p-2"
-                />
+                <div className="w-16 h-16 flex items-center justify-center rounded-lg shadow-lg bg-white/90">
+                  <Bank size={32} weight="bold" className="text-purple-700" />
+                </div>
                 <div>
-                  <p className="text-white font-semibold text-lg">Nequi</p>
-                  <p className="text-gray-300 text-sm">Número 3001234567</p>
+                  <p className="text-white font-semibold text-lg">Cuenta bancaria</p>
+                  <p className="text-gray-300 text-sm">IBAN ES45 0182 0012 5902 0162 4253</p>
                 </div>
               </div>
             </div>
