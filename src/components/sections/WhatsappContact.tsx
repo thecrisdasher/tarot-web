@@ -1,4 +1,3 @@
-import { Container } from "../shared/Container";
 import { useState, useEffect } from "react";
 
 export const WhatsappContact = () => {

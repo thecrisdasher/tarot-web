@@ -7,7 +7,6 @@ import { useState } from "react";
 export const Hero = () => {
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
-  const [enviado, setEnviado] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +26,6 @@ export const Hero = () => {
         body: formData,
       });
       if (response.ok) {
-        setEnviado(true);
         setEmail("");
         setShowToast(true);
         setTimeout(() => setShowToast(false), 3500);
