@@ -104,17 +104,17 @@ export const Pricing = () => {
                       </svg>
                     )}
                     </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-purple-600 transition-all duration-500 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.8)' }}>
+                  <h3 className="text-2xl lg:text-3xl font-bold !text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-purple-600 transition-all duration-500 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.8)' }}>
                     {plan.title}
                   </h3>
-                  <p className="text-slate-700 mb-6 leading-relaxed font-medium drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.7)' }}>
+                  <p className="text-white/90 group-hover:text-slate-800 mb-6 leading-relaxed font-medium drop-shadow-sm transition-colors duration-300">
                     {plan.description}
                   </p>
                   <div className="flex items-baseline gap-2 mb-6">
                     <span className="text-4xl lg:text-5xl font-bold tarot-gradient drop-shadow-lg">
                       €{plan.price}
                     </span>
-                    <span className="text-slate-600 text-lg font-semibold" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.6)' }}>
+                    <span className="text-white/80 group-hover:text-slate-700 text-lg font-semibold transition-colors duration-300">
                       {plan.currency}
                     </span>
                   </div>
@@ -129,7 +129,7 @@ export const Pricing = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <p className="text-slate-800 leading-relaxed font-medium drop-shadow-sm" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.6)' }}>
+                        <p className="text-white group-hover:text-slate-800 leading-relaxed font-medium drop-shadow-sm transition-colors duration-300">
                           {feature}
                         </p>
                       </div>

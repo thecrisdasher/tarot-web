@@ -41,7 +41,7 @@ export const Services = () => {
             <span className="text-white text-shadow-lg">Testimonios de</span>
             <span className="block mt-2 bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 text-transparent bg-clip-text animate-text-glow"> nuestros consultantes</span>
           </h1>
-          <Paragraph className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light">
+          <Paragraph className="text-xl !text-white max-w-3xl mx-auto leading-relaxed font-light drop-shadow">
             Descubre cómo las cartas del tarot han transformado la vida de nuestros consultantes, 
             guiándolos hacia la claridad, el amor y la prosperidad.
           </Paragraph>
@@ -111,7 +111,7 @@ export const Services = () => {
             <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 text-shadow-lg">
               La confianza de miles de consultantes
             </h3>
-            <Paragraph className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
+            <Paragraph className="text-xl !text-white mb-12 max-w-2xl mx-auto drop-shadow font-light">
               Maestra Atenea ha guiado a más de 15,000 personas en su camino hacia la claridad y el bienestar espiritual.
             </Paragraph>
             
@@ -120,19 +120,19 @@ export const Services = () => {
                 <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 text-transparent bg-clip-text mb-4 group-hover:scale-110 transition-transform duration-300">
                   15,000+
                 </div>
-                <p className="text-white/80 font-medium">Consultas realizadas</p>
+                <p className="text-white font-medium drop-shadow">Consultas realizadas</p>
               </div>
               <div className="group">
                 <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 text-transparent bg-clip-text mb-4 group-hover:scale-110 transition-transform duration-300">
                   98%
                 </div>
-                <p className="text-white/80 font-medium">Satisfacción garantizada</p>
+                <p className="text-white font-medium drop-shadow">Satisfacción garantizada</p>
               </div>
               <div className="group">
                 <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-500 text-transparent bg-clip-text mb-4 group-hover:scale-110 transition-transform duration-300">
                   20+
                 </div>
-                <p className="text-white/80 font-medium">Años de experiencia</p>
+                <p className="text-white font-medium drop-shadow">Años de experiencia</p>
               </div>
             </div>
           </div>
