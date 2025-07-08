@@ -21,9 +21,10 @@ export const Pricing = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-900/30 to-transparent">
-      {/* Fondo celestial */}
-      <div className="absolute inset-0 celestial-gradient"></div>
+    <section className="py-20 lg:py-32 relative overflow-hidden">
+      
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 celestial-gradient opacity-30"></div>
       
       {/* Elementos decorativos Sol y Luna */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -158,7 +159,7 @@ export const Pricing = () => {
       
         {/* Sección de confidencialidad con mejor contraste */}
         <div className="mt-20 lg:mt-32">
-          <div className="modern-card premium-shadow p-8 lg:p-12 text-center bg-white/95 backdrop-blur-sm">
+          <div className="modern-card premium-shadow p-8 lg:p-12 text-center bg-white/10 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
@@ -168,24 +169,24 @@ export const Pricing = () => {
                 </div>
               </div>
               
-              <h3 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6 drop-shadow-sm">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 drop-shadow-sm">
                 Confidencialidad y Privacidad Garantizada
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-left">
                 <div>
-                  <h4 className="text-xl font-semibold text-slate-800 mb-4 drop-shadow-sm">
+                  <h4 className="text-xl font-semibold !text-white mb-4 drop-shadow-sm">
                     🔒 Consultas Privadas
                   </h4>
-                  <Paragraph className="text-slate-700 leading-relaxed font-medium">
+                  <Paragraph className="!text-white leading-relaxed font-medium">
                     Todas las consultas son completamente confidenciales. Tu información personal 
                     y las revelaciones de las cartas se mantienen en absoluto secreto.
                   </Paragraph>
             </div>
             <div>
-                  <h4 className="text-xl font-semibold text-slate-800 mb-4 drop-shadow-sm">
+                  <h4 className="text-xl font-semibold !text-white mb-4 drop-shadow-sm">
                     ⭐ Experiencia Personalizada
                   </h4>
-                  <Paragraph className="text-slate-700 leading-relaxed font-medium">
+                  <Paragraph className="!text-white leading-relaxed font-medium">
                     Cada lectura es única y personalizada según tu situación específica. 
                     La Maestra Atenea canaliza las energías cósmicas para darte la guía más precisa.
                   </Paragraph>

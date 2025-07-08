@@ -23,7 +23,7 @@ export const Navbar = () => {
               />
             </div>
           </div>
-          <div className="hidden sm:block -ml-6">
+          <div className="block -ml-6">
             <h1 className="text-xl lg:text-2xl font-bold flex items-center h-full">
               <span className="navbar-title-white">Tarot &nbsp;</span>
               <span className="navbar-title-modern">Sol y Luna</span>

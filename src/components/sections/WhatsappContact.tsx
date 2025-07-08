@@ -95,7 +95,7 @@ export const WhatsappContact = () => {
       hoverGradient: "from-emerald-800 via-emerald-600 to-green-500",
       textColor: "group-hover:text-emerald-300",
       shadowColor: "rgba(25, 252, 0, 0.7)",
-      image: "/assets/images/ultima3.png"
+      image: "/assets/images/cartasmisticas-tarot-2.png"
     },
     {
       title: "Protección Espiritual",
@@ -106,7 +106,7 @@ export const WhatsappContact = () => {
       hoverGradient: "from-cyan-800 via-cyan-700 to-cyan-500",
       textColor: "group-hover:text-cyan-300",
       shadowColor: "rgba(14, 165, 233, 0.6)",
-      image: "/assets/images/vvelas2.png"
+      image: "/assets/images/cartasnumero3.png"
     }
   ];
 

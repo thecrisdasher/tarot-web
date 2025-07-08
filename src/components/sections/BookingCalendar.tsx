@@ -133,8 +133,7 @@ export const BookingCalendar = () => {
 
   if (!selectedService) {
     return (
-      <section id="calendario" className="py-20 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-900/25 to-transparent">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/30 via-indigo-900/30 to-purple-900/30"></div>
+      <section id="calendario" className="py-20 relative overflow-hidden">
         <Container className="relative z-10 text-center">
           <div className="max-w-2xl mx-auto">
             <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -142,8 +141,10 @@ export const BookingCalendar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <Title>🔮 Primero Selecciona tu Consulta</Title>
-            <Paragraph className="mt-4 text-lg">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tarot-gradient drop-shadow-lg">
+              🔮 Primero Selecciona tu Consulta
+            </h2>
+            <Paragraph className="mt-4 text-lg !text-white">
               Para agendar tu cita, primero debes elegir el tipo de consulta que deseas en la sección de arriba.
             </Paragraph>
             <button
@@ -163,9 +164,7 @@ export const BookingCalendar = () => {
   }
 
   return (
-    <section id="calendario" className="py-20 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-900/25 to-transparent">
-      {/* Fondo místico */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/90 via-indigo-900/90 to-purple-900/90 backdrop-blur-sm"></div>
+    <section id="calendario" className="py-20 relative overflow-hidden">
       
       {/* Partículas místicas */}
       <div className="absolute inset-0 overflow-hidden">

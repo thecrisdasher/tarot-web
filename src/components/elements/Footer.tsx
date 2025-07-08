@@ -3,10 +3,11 @@ import { Container } from "../shared/Container";
 export const Footer = () => {
   return (
     <footer className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-transparent via-purple-900/25 to-transparent">
+      
       {/* Fondo celestial */}
       <div className="absolute inset-0 celestial-gradient"></div>
       
-      {/* Elementos decorativos */}
+      {/* Elementos decorativos Sol y Luna */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-8 right-12 w-16 h-16 sol-gradient rounded-full animate-pulse-cosmic opacity-25"></div>
         <div className="absolute bottom-8 left-16 w-12 h-12 luna-gradient rounded-full animate-pulse-cosmic opacity-30"></div>
@@ -38,10 +39,8 @@ export const Footer = () => {
           {/* Logo y descripción */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-3xl bg-gradient-to-br from-orange-400 to-purple-600 flex items-center justify-center sol-luna-glow">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-                </svg>
+              <div className="w-28 h-28 rounded-3xl overflow-hidden">
+                <img src="/assets/images/solyluna.png" alt="Sol y Luna Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold tarot-gradient">
@@ -52,7 +51,7 @@ export const Footer = () => {
                 </p>
               </div>
             </div>
-            <p className="text-slate-600 leading-relaxed mb-6 max-w-md">
+            <p className="text-white/80 leading-relaxed mb-6 max-w-md">
               Descubre los misterios del universo a través de la sabiduría ancestral del tarot. 
               La Maestra Atenea te guía en un viaje de autodescubrimiento y crecimiento espiritual.
             </p>
@@ -80,27 +79,27 @@ export const Footer = () => {
 
           {/* Servicios */}
           <div>
-            <h4 className="text-lg font-bold text-slate-800 mb-6">
+            <h4 className="text-lg font-bold text-white mb-6">
               Nuestros Servicios
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-slate-600 hover:text-orange-500 transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-orange-400 transition-colors duration-300">
                   Tarot del Amor
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-orange-500 transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-orange-400 transition-colors duration-300">
                   Tarot de Prosperidad
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-orange-500 transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-orange-400 transition-colors duration-300">
                   Guía Espiritual
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-orange-500 transition-colors duration-300">
+                <a href="#" className="text-white/80 hover:text-orange-400 transition-colors duration-300">
                   Consultas Premium
                 </a>
               </li>
@@ -109,7 +108,7 @@ export const Footer = () => {
           
           {/* Contacto */}
           <div>
-            <h4 className="text-lg font-bold text-slate-800 mb-6">
+            <h4 className="text-lg font-bold text-white mb-6">
               Contacto
             </h4>
             <ul className="space-y-3">
@@ -119,7 +118,7 @@ export const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <span className="text-slate-600">+34 611 334 653</span>
+                <span className="text-white/80">+34 611 334 653</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-purple-600 rounded-full flex items-center justify-center">
@@ -127,7 +126,7 @@ export const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-slate-600">tarotsolyluna30@gmail.com</span>
+                <span className="text-white/80">tarotsolyluna30@gmail.com</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-5 h-5 bg-gradient-to-r from-orange-400 to-purple-600 rounded-full flex items-center justify-center">
@@ -135,7 +134,7 @@ export const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span className="text-slate-600">24/7 Disponible</span>
+                <span className="text-white/80">24/7 Disponible</span>
               </li>
           </ul>
           </div>
@@ -144,14 +143,14 @@ export const Footer = () => {
         {/* Línea separadora */}
         <div className="mt-12 pt-8 border-t border-slate-200">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-slate-600 text-center md:text-left">
+            <p className="text-white/80 text-center md:text-left">
               © 2024 Tarot Sol y Luna. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-6">
-              <a href="#" className="text-slate-600 hover:text-orange-500 transition-colors duration-300 text-sm">
+              <a href="#" className="text-white/80 hover:text-orange-400 transition-colors duration-300 text-sm">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-slate-600 hover:text-orange-500 transition-colors duration-300 text-sm">
+              <a href="#" className="text-white/80 hover:text-orange-400 transition-colors duration-300 text-sm">
                 Términos de Servicio
               </a>
             </div>

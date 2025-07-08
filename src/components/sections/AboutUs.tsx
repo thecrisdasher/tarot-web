@@ -5,8 +5,11 @@ export const AboutUs = () => {
   return (
     <section id="about" className="py-20 lg:py-32 relative overflow-hidden">
       {/* Fondo místico mejorado */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/95 via-indigo-900/90 to-violet-900/95"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-indigo-900/15 to-violet-900/20"></div>
       
+      {/* Overlay oscuro adicional */}
+      <div className="absolute inset-0 celestial-gradient opacity-40"></div>
+
       {/* Elementos decorativos de cartas de tarot */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -39,13 +42,13 @@ export const AboutUs = () => {
                 {/* Cartas de Tarot */}
                 <div className="col-span-2 flex justify-center">
                   <div className="relative w-64 h-96 transform hover:scale-105 transition-transform duration-500">
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-500/20 to-indigo-500/20 backdrop-blur-sm border border-white/10"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-800/40 to-indigo-800/40 backdrop-blur-sm border border-white/10"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-24 h-24 mx-auto mb-4">
+                        <div className="w-32 h-32 mx-auto mb-6">
                           <img 
-                            src="/assets/logos/logotarot.png" 
-                            alt="Símbolo del Sol"
+                            src="/assets/images/solyluna.png" 
+                            alt="Sol y Luna Logo"
                             className="w-full h-full object-contain filter brightness-150"
                           />
                         </div>

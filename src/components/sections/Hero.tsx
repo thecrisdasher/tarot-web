@@ -20,7 +20,7 @@ export const Hero = () => {
       const formData = new FormData();
       formData.append("correo", email);
       formData.append("origen", "Hero");
-      const response = await fetch("https://formspree.io/f/meogvbjj", {
+      const response = await fetch("https://formspree.io/f/xpwrgqey", {
         method: "POST",
         headers: { "Accept": "application/json" },
         body: formData,

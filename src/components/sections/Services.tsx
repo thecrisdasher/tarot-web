@@ -4,9 +4,7 @@ import { services } from "../../utils/services-data";
 
 export const Services = () => {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-900/20 to-transparent">
-      {/* Fondo celestial mejorado */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/95 via-indigo-900/90 to-violet-900/95"></div>
+    <section className="py-20 lg:py-32 relative overflow-hidden">
       
       {/* Elementos decorativos */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

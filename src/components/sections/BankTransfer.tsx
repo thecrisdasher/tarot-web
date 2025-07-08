@@ -98,9 +98,7 @@ export const BankTransfer: React.FC<BankTransferProps> = () => {
   };
 
   return (
-    <section id="transferencia" className="relative py-24 bg-gradient-to-b from-transparent via-purple-900/25 to-transparent">
-      {/* Fondo con gradiente y efectos */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/90 via-purple-800/90 to-purple-900/90 backdrop-blur-sm"></div>
+    <section id="transferencia" className="relative py-24">
       
       {/* Efectos de luz y partículas */}
       <div className="absolute inset-0 overflow-hidden">
@@ -198,8 +196,10 @@ export const BankTransfer: React.FC<BankTransferProps> = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Lado izquierdo: datos bancarios y QR */}
           <div className="bg-white/5 p-8 rounded-3xl backdrop-blur-sm border border-white/10 shadow-xl">
-            <Title>Pago mediante transferencia bancaria</Title>
-            <Paragraph className="mt-4 text-gray-300">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold !text-white drop-shadow-lg">
+              Pago mediante transferencia bancaria
+            </h2>
+            <Paragraph className="mt-4 text-lg !text-white">
               Realiza tu pago a cualquiera de las siguientes cuentas. Luego adjunta tu comprobante para validar la transacción.
             </Paragraph>
 

@@ -32,9 +32,7 @@ export const BookingConfirmation = () => {
   }
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-transparent via-emerald-900/25 to-transparent">
-      {/* Fondo celebratorio */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-900/90 via-emerald-800/90 to-emerald-900/90 backdrop-blur-sm"></div>
+    <section className="py-20 relative overflow-hidden">
       
       {/* Partículas de celebración */}
       <div className="absolute inset-0 overflow-hidden">

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export const CTA = () => {
   return (
-    <section className="py-24 relative bg-gradient-to-b from-transparent via-purple-800/30 to-transparent">
+    <section className="py-24 relative">
       <Container>
         <div className="relative z-10 text-center max-w-2xl mx-auto p-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8">
@@ -22,7 +22,7 @@ export const CTA = () => {
             </span>{" "}
             cambia tu destino hoy
           </h1>
-          <Paragraph className="mb-10 text-lg text-gray-200">
+          <Paragraph className="mb-10 text-lg !text-white">
             La Maestra Atenea te guía con sabiduría ancestral para resolver problemas de amor, prosperidad y protección. ¡Transforma tu vida hoy mismo con una consulta confidencial y resultados garantizados!
           </Paragraph>
           <div className="mx-auto max-w-md">
@@ -71,7 +71,7 @@ export const ContactForm = () => {
     e.preventDefault();
     setEnviando(true);
     try {
-      const response = await fetch("https://formspree.io/f/meogvbjj", {
+      const response = await fetch("https://formspree.io/f/xpwrgqey", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -81,6 +81,9 @@ export const ContactForm = () => {
       if (response.ok) {
         setEnviado(true);
         setForm({ nombre: '', email: '', telefono: '', mensaje: '' });
+      } else {
+        console.error(await response.text());
+        alert("Hubo un problema al enviar tu mensaje. Intenta nuevamente más tarde.");
       }
     } finally {
       setEnviando(false);
@@ -88,7 +91,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-transparent via-indigo-800/25 to-transparent">
+    <section className="py-20">
       <Container>
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Contacto directo</h2>
