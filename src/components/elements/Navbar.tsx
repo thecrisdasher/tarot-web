@@ -18,7 +18,8 @@ export const Navbar = () => {
             <div className="w-16 h-16 lg:w-32 lg:h-32 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <img 
                 src="/assets/images/solyluna.png" 
-                alt="Sol y Luna Logo" 
+                alt="Logo Tarot Sol y Luna" 
+                loading="lazy" 
                 className="w-full h-full object-contain"
               />
             </div>

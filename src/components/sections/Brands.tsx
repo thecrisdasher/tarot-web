@@ -21,7 +21,8 @@ export const Brands = () => {
                 src={`/assets/logos/${logo}.png`}
                 width="100"
                 height="60"
-                alt={logo}
+                alt={`${logo} logo tarot`}
+                loading="lazy"
                 className="h-7 sm:h-10 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
               />
             </div>

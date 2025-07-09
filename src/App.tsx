@@ -25,7 +25,7 @@ function App() {
   }, []);
   
   return (
-    <Layout title="Tarot Sol y Luna">
+    <Layout title="Tarot Luna y Sol | Lectura de Tarot Online, Amor y Energía Espiritual">
       <section id="hero">
         <Hero />
       </section>
@@ -62,7 +62,8 @@ function App() {
             <div className="flex items-center justify-center">
               <img 
                 src="/assets/logos/logowhatsapp.png" 
-                alt="WhatsApp" 
+                alt="Icono WhatsApp consulta tarot" 
+                loading="lazy" 
                 className="w-11 h-11 z-10 object-contain filter brightness-125 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" 
               />
             </div>

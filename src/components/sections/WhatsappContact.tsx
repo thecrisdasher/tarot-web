@@ -179,7 +179,8 @@ export const WhatsappContact = () => {
                   >
                     <img
                       src={option.image}
-                      alt={option.title}
+                      alt={`${option.title} tarot`}
+                      loading="lazy"
                       className="w-full h-[400px] object-cover filter brightness-75 transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 transition-all duration-500 flex flex-col justify-end p-6">
@@ -204,7 +205,8 @@ export const WhatsappContact = () => {
                       >
                         <img 
                           src="/assets/logos/whatsapp.png" 
-                          alt="WhatsApp" 
+                          alt="Icono WhatsApp tarot" 
+                          loading="lazy" 
                           className="w-7 h-7 object-contain animate-float-msg" 
                         />
                         <span className="font-bold tracking-wide">Contactar Ahora</span>

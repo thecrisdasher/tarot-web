@@ -40,7 +40,7 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-28 h-28 rounded-3xl overflow-hidden">
-                <img src="/assets/images/solyluna.png" alt="Sol y Luna Logo" className="w-full h-full object-contain" />
+                <img src="/assets/images/solyluna.png" alt="Logo Tarot Sol y Luna" loading="lazy" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold tarot-gradient">

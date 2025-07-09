@@ -48,7 +48,8 @@ export const AboutUs = () => {
                         <div className="w-32 h-32 mx-auto mb-6">
                           <img 
                             src="/assets/images/solyluna.png" 
-                            alt="Sol y Luna Logo"
+                            alt="Logo Tarot Sol y Luna"
+                            loading="lazy"
                             className="w-full h-full object-contain filter brightness-150"
                           />
                         </div>

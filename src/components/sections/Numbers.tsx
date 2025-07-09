@@ -103,7 +103,8 @@ export const Numbers = () => {
               ></div>
               <img 
                 src="/assets/logos/logotierra.png" 
-                alt="Logo Tierra" 
+                alt="Logo Elemento Tierra Tarot" 
+                loading="lazy" 
                 className={`h-24 md:h-28 w-auto relative z-10 transition-all duration-700 
                 ${isHovered ? 'scale-110 brightness-125 rotate-[5deg]' : 'scale-100 rotate-0'}`}
               />
@@ -166,7 +167,8 @@ export const Numbers = () => {
               ></div>
               <img 
                 src="/assets/logos/logotarot.png" 
-                alt="Logo Tarot" 
+                alt="Logo Elemento Tarot" 
+                loading="lazy" 
                 className={`h-24 md:h-28 w-auto relative z-10 transition-all duration-700 
                 ${isTarotHovered ? 'scale-110 brightness-125 rotate-[-5deg]' : 'scale-100 rotate-0'}`}
               />
@@ -229,7 +231,8 @@ export const Numbers = () => {
               ></div>
               <img 
                 src="/assets/logos/logolimpias.png" 
-                alt="Logo Limpias" 
+                alt="Logo Limpias Espirituales Tarot" 
+                loading="lazy" 
                 className={`h-24 md:h-28 w-auto relative z-10 transition-all duration-700 
                 ${isLimpiasHovered ? 'scale-110 brightness-125 rotate-[3deg]' : 'scale-100 rotate-0'}`}
               />
@@ -294,7 +297,8 @@ export const Numbers = () => {
               ></div>
               <img 
                 src="/assets/logos/logofuego.png" 
-                alt="Logo Fuego" 
+                alt="Logo Fuego Espiritual Tarot" 
+                loading="lazy" 
                 className={`h-24 md:h-28 w-auto relative z-10 transition-all duration-700 
                 ${isFuegoHovered ? 'scale-110 brightness-130 rotate-[6deg]' : 'scale-100 rotate-0'}`}
               />
