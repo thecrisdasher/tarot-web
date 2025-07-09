@@ -21,7 +21,7 @@ export const services = [
     ),
     testimonial: {
       name: "María Elena",
-      location: "Ciudad de México",
+      location: "Murcia, España",
       text: "La Maestra Atenea me ayudó a entender por qué mis relaciones no funcionaban. Después de la consulta, encontré a mi alma gemela. Sus predicciones se cumplieron exactamente como me lo dijo."
     }
   },
@@ -47,7 +47,7 @@ export const services = [
     ),
     testimonial: {
       name: "Roberto Silva",
-      location: "Guadalajara, México",
+      location: "Madrid, España",
       text: "Increíble cómo la Maestra Atenea vio mi futuro profesional. Me dijo que en 3 meses tendría una oportunidad de negocio importante. Exactamente 3 meses después, recibí la propuesta de inversión que cambió mi vida."
     }
   },
@@ -73,7 +73,7 @@ export const services = [
     ),
     testimonial: {
       name: "Sofia Ramírez",
-      location: "Monterrey, México",
+      location: "Toledo, España",
       text: "Estaba perdida en mi vida, sin saber qué dirección tomar. La Maestra Atenea me ayudó a encontrar mi propósito. Ahora soy coach espiritual y ayudo a otras personas, tal como ella me predijo."
     }
   },
